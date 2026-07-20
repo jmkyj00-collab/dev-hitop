@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주식회사 하이탑 (HITOP) | 교량이음장치 · 논슬립 · 목재덱 전문기업</title>
+  <meta name="description" content="주식회사 하이탑 — 교량이음장치, 논슬립, 목재덱 전문 납품기업. 조달청 등록, 벤처기업, G-PASS 인증.">
+  <link rel="stylesheet" href="/dev-hitop/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+  <style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;line-height:1;}</style>
+</head>
+<body class="bg-surface text-ink">
+
+  <header class="navbar" data-navbar>
+  <div class="container-hi flex h-full items-center justify-between">
+
+    <!-- 로고 -->
+    <a href="/dev-hitop/" class="flex items-center" aria-label="주식회사 하이탑 홈">
+      <img src="/dev-hitop/images/brand/logo.png" alt="주식회사 하이탑" class="navbar-logo-img">
+    </a>
+
+    <!-- 데스크톱·태블릿 메뉴 -->
+    <nav class="hidden items-center gap-10 md:flex lg:gap-12" aria-label="주 메뉴">
+      
+        
+          <a href="/dev-hitop/" class="navbar-link is-active">홈</a>
+        
+      
+        
+          <a href="/dev-hitop/about/" class="navbar-link ">회사소개</a>
+        
+      
+        
+          <div class="group relative">
+            <a href="#" class="navbar-link flex items-center gap-1">
+              제품안내
+              <span class="material-symbols-outlined text-base" aria-hidden="true">expand_more</span>
+            </a>
+            <div class="nav-dropdown">
+              
+                <a href="/dev-hitop/products-bridge.html">교량이음장치</a>
+              
+                <a href="/dev-hitop/products-nonslip.html">논슬립</a>
+              
+                <a href="/dev-hitop/products-deck.html">목재덱</a>
+              
+            </div>
+          </div>
+        
+      
+        
+          <a href="/dev-hitop/delivery.html" class="navbar-link ">납품실적</a>
+        
+      
+    </nav>
+
+    <!-- 우측 -->
+    <div class="flex items-center gap-5">
+      <a href="/dev-hitop/about/#location" class="btn-accent hidden !px-5 !py-2.5 md:inline-flex">문의하기</a>
+      <button class="text-ink md:hidden" data-nav-toggle
+              aria-label="메뉴 열기" aria-controls="mobile-nav" aria-expanded="false">
+        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- 모바일 메뉴 패널 -->
+<div id="mobile-nav" class="fixed inset-0 z-40 hidden bg-white pt-20 md:hidden" data-mobile-nav>
+  <nav class="flex h-full flex-col items-center justify-center gap-6 text-lg font-bold text-ink" aria-label="모바일 메뉴">
+    
+      
+        <a href="/dev-hitop/" class="transition-colors hover:text-accent">홈</a>
+      
+    
+      
+        <a href="/dev-hitop/about/" class="transition-colors hover:text-accent">회사소개</a>
+      
+    
+      
+        <span class="font-display text-xs font-bold uppercase tracking-[0.25em] text-secondary/70">제품안내</span>
+        
+          <a href="/dev-hitop/products-bridge.html" class="transition-colors hover:text-accent">교량이음장치</a>
+        
+          <a href="/dev-hitop/products-nonslip.html" class="transition-colors hover:text-accent">논슬립</a>
+        
+          <a href="/dev-hitop/products-deck.html" class="transition-colors hover:text-accent">목재덱</a>
+        
+      
+    
+      
+        <a href="/dev-hitop/delivery.html" class="transition-colors hover:text-accent">납품실적</a>
+      
+    
+    <a href="/dev-hitop/about/#location" class="btn-accent mt-2">문의하기</a>
+  </nav>
+</div>
+
+
+  <main>
+    
+<!-- ══ HERO — Ken Burns 슬로우 줌 + 마스크 리빌 (이미지 위 다크 오버레이) ══ -->
+<!-- sticky: 교량 배경은 화면에 고정 — 스크롤하면 콘텐츠만 위로 사라지고(JS 스크럽),
+     같은 배경 위로 제품 섹션 콘텐츠가 순차 등장 -->
+<section data-hero class="sticky top-0 flex h-screen min-h-[680px] items-center overflow-hidden bg-night">
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <img src="/dev-hitop/images/hero/hero-main.png" alt="교량 전경 — 하이탑 교량이음장치 적용 분야"
+         class="kenburns h-full w-full object-cover" onerror="this.style.display='none'">
+  </div>
+  <!-- 시네마틱 그라데이션: 텍스트가 앉는 좌측·하단만 어둡게, 우측은 밝은 사진 그대로 -->
+  <div class="absolute inset-0 z-10 bg-gradient-to-r from-night/75 via-night/35 to-night/5"></div>
+  <div class="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-night/70 to-transparent"></div>
+  <!-- 제품 콘텐츠 전환 시 배경 딤 (JS가 스크롤 진행도로 opacity 제어) -->
+  <div class="absolute inset-0 z-10 bg-night opacity-0" data-hero-dim></div>
+
+  <div class="container-hi relative z-20 w-full text-white" data-hero-content>
+    <div class="max-w-3xl">
+      <p class="mask-line">
+        <span class="eyebrow-line !text-white/60">Bridge Joint · Non-Slip · Wood Deck</span>
+      </p>
+      <h1 class="mt-6 text-[2.6rem] font-extrabold leading-[1.18] tracking-tight [text-shadow:0_2px_24px_rgba(11,14,19,0.4)] sm:text-6xl lg:text-[4.2rem]">
+        <span class="mask-line"><span>구조물의 안전을 잇는</span></span>
+        <span class="mask-line"><span>정밀 기술, 하이탑</span></span>
+      </h1>
+      <p class="mask-line mask-delay-1 mt-7 max-w-xl">
+        <span class="text-base leading-relaxed text-white/80 [text-shadow:0_1px_12px_rgba(11,14,19,0.45)] sm:text-lg">
+          교량이음장치부터 논슬립, 목재덱까지
+          직접 생산한 제품을 사후관리까지 하이탑이 책임집니다.
+        </span>
+      </p>
+      <div class="mask-line mask-delay-2 mt-10">
+        <span class="flex flex-wrap items-center gap-4">
+          <a href="/dev-hitop/products-bridge.html" class="btn-accent">제품안내</a>
+          <a href="/dev-hitop/about/" class="btn-outline-white">회사소개</a>
+        </span>
+      </div>
+      <p class="mask-line mask-delay-2 mt-12">
+        <span class="font-display text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-white/60 [text-shadow:0_1px_10px_rgba(11,14,19,0.45)]">
+          나라장터 등록 제품 74개 &nbsp;·&nbsp; 벤처기업 &nbsp;·&nbsp; G-PASS &nbsp;·&nbsp; 등록 특허 5건
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 스크롤 큐 -->
+  <div class="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex" data-hero-cue>
+    <span class="font-display text-[0.6rem] font-bold uppercase tracking-[0.3em] text-white/45">Scroll</span>
+    <span class="scroll-cue-line"></span>
+  </div>
+</section>
+
+<!-- ══ PRODUCT LINEUP (Bento) — 스냅 도착 시 콘텐츠가 스태거로 한 번에 등장 ══ -->
+<!-- 배경 없음(투명): 고정된 교량 사진 위로 콘텐츠 표시.
+     relative 필수 — sticky(positioned) 히어로보다 위에 그려지려면 포지셔닝 필요 -->
+<section data-next-section data-reveal-sync class="reveal-art relative flex flex-col justify-center overflow-clip py-16 md:min-h-[calc(100vh-5rem)] md:py-0">
+    <div class="container-hi w-full">
+      <div class="mb-9 flex flex-wrap items-end justify-between gap-5" data-reveal="top">
+        <div>
+          <span class="eyebrow-line !text-white/75 [text-shadow:0_1px_10px_rgba(11,14,19,0.5)]">Product Lineup</span>
+          <h2 class="mt-3 text-3xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(11,14,19,0.5)] sm:text-4xl">핵심 제품군</h2>
+        </div>
+        <a href="/dev-hitop/delivery.html" class="group inline-flex items-center gap-2 pb-1 font-display text-[0.78rem] font-bold uppercase tracking-[0.18em] text-white/70 [text-shadow:0_1px_10px_rgba(11,14,19,0.5)] transition-colors hover:text-white">
+          나라장터 등록제품
+          <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-12">
+        <!-- 교량이음장치 -->
+        <a href="/dev-hitop/products-bridge.html" data-reveal="left" class="group relative block h-[320px] overflow-hidden rounded-xl ring-1 ring-white/15 md:col-span-8 md:h-[38vh] md:min-h-[250px]">
+          <img src="/dev-hitop/images/products/bridge/monocell.jpg" alt="교량이음장치"
+               class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+               onerror="this.style.opacity=0">
+          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-night/95 via-night/30 to-transparent p-7">
+            <span class="absolute left-7 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">01</span>
+            <h3 class="mb-2 text-2xl font-extrabold text-white">교량이음장치</h3>
+            <p class="mb-5 max-w-md text-sm leading-relaxed text-white/65">Monocell · Finger · Rail Seal 등 6종의 고성능 조인트로 구조물의 신축과 안전성을 확보합니다.</p>
+            <span class="product-lineup-cta">
+              View More <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- 논슬립 -->
+        <a href="/dev-hitop/products-nonslip.html" data-reveal="right" class="group relative block h-[320px] overflow-hidden rounded-xl ring-1 ring-white/15 md:col-span-4 md:h-[38vh] md:min-h-[250px]">
+          <img src="/dev-hitop/images/home/nonslip-install-01.jpg" alt="논슬립"
+               class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+               onerror="this.style.opacity=0">
+          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-night/95 via-night/35 to-transparent p-6">
+            <span class="absolute left-6 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">02</span>
+            <h3 class="mb-2 text-2xl font-extrabold text-white">논슬립</h3>
+            <p class="mb-4 text-sm leading-relaxed text-white/65">스테인리스 · 세라믹 · 알루미늄 등 보행 안전을 위한 프리미엄 논슬립 솔루션.</p>
+            <span class="product-lineup-cta">
+              View More <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- 목재덱 -->
+        <a href="/dev-hitop/products-deck.html" data-reveal class="group relative block h-[240px] overflow-hidden rounded-xl ring-1 ring-white/15 md:col-span-12 md:h-[26vh] md:min-h-[180px]">
+          <img src="/dev-hitop/images/hero/deck-hero.jpg" alt="목재덱"
+               class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+               onerror="this.style.opacity=0">
+          <div class="absolute inset-0 flex items-end bg-gradient-to-r from-night/90 via-night/45 to-transparent p-7">
+            <span class="absolute left-7 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">03</span>
+            <div class="max-w-2xl">
+              <h3 class="mb-2 text-2xl font-extrabold text-white">천연 목재덱</h3>
+              <p class="mb-4 text-sm leading-relaxed text-white/65">낙엽송 · 마사란두바 · 멀바우 · 카스 등 내구성이 검증된 천연 목재로 자연과 조화로운 공간을 제안합니다.</p>
+              <span class="product-lineup-cta">
+                View More <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+</section>
+
+<!-- ══ CORE VALUES ══ -->
+<section data-core-section class="relative min-h-screen overflow-clip bg-section">
+  <div class="technical-grid absolute inset-0 opacity-40"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 hidden -translate-y-1/2 rotate-180 font-display text-[7rem] font-extrabold leading-none tracking-[0.14em] text-ink/[0.09] [writing-mode:vertical-rl] xl:block">HITOP</div>
+
+  <div class="container-hi relative z-10 py-16 lg:py-16 xl:py-20 xl:pr-32">
+    <!-- 상단 메시지: 넓게 호흡하는 편집형 헤더 -->
+    <div class="grid items-end gap-7 lg:grid-cols-12 lg:gap-10" data-reveal="left">
+      <div class="lg:col-span-7">
+        <span class="eyebrow-line">Core Values</span>
+        <h2 class="mt-4 text-3xl font-extrabold leading-snug text-on-section sm:text-4xl lg:text-[2.7rem]">
+          타협하지 않는 품질의 기준
+        </h2>
+      </div>
+      <p class="border-t border-ink/15 pt-5 leading-relaxed text-on-section-variant lg:col-span-5">
+        특허 기술과 엄격한 시험 성적을 통과한 제품만이
+        하이탑의 이름을 갖습니다. 설계와 직접 생산, 사후관리까지
+        하나의 기준으로 완결합니다.
+      </p>
+    </div>
+
+    
+
+    <!-- 현장 이미지와 기업 지표를 한 덩어리로 묶은 프로덕션 스테이지 -->
+    <div class="mt-9 lg:mt-8 xl:mt-10" data-reveal>
+      <div class="grid overflow-hidden rounded-2xl bg-white ring-1 ring-ink/10 shadow-[0_28px_70px_rgba(25,28,29,0.13)] lg:grid-cols-12">
+        <figure class="relative min-h-[330px] overflow-hidden lg:col-span-8 lg:min-h-[380px] xl:min-h-[410px]">
+          <img src="/dev-hitop/images/delivery/joint-installation.jpg" alt="교량이음장치 정밀 설치 현장"
+               class="absolute inset-0 h-full w-full object-cover object-center" loading="lazy"
+               onerror="this.style.display='none'">
+          <div class="absolute inset-0 bg-gradient-to-t from-night/80 via-night/5 to-transparent"></div>
+          <div class="absolute left-6 top-6 flex items-center gap-3 text-white sm:left-8 sm:top-8">
+            <span class="h-px w-9 bg-accent"></span>
+            <span class="font-display text-[0.65rem] font-bold uppercase tracking-[0.25em]">Field Proof · 01</span>
+          </div>
+          <figcaption class="absolute bottom-7 left-6 right-6 flex flex-wrap items-end justify-between gap-4 text-white sm:bottom-8 sm:left-8 sm:right-8">
+            <div>
+              <p class="font-display text-[0.65rem] font-bold uppercase tracking-[0.22em] text-white/60">Precision Installation</p>
+              <p class="mt-2 text-xl font-extrabold sm:text-2xl">제품의 성능은 현장에서 완성됩니다</p>
+            </div>
+            <span class="rounded-full border border-white/30 bg-night/25 px-4 py-2 text-xs font-bold backdrop-blur-sm">직접 시공 · 품질 관리</span>
+          </figcaption>
+        </figure>
+
+        <aside class="relative flex min-h-[330px] flex-col justify-between p-7 sm:p-9 lg:col-span-4 lg:min-h-[380px] xl:min-h-[410px]">
+          <span class="absolute inset-y-0 left-0 hidden w-px bg-ink/10 lg:block"></span>
+          <div class="flex items-start justify-between gap-5">
+            <div>
+              <p class="font-display text-[0.62rem] font-bold uppercase tracking-[0.24em] text-secondary/70">Years in Business</p>
+              <p class="mt-2 font-display text-6xl font-extrabold tracking-[-0.06em] text-ink">25<span class="ml-1 text-xl tracking-normal text-accent">년</span></p>
+              <p class="mt-3 max-w-[13rem] text-sm leading-relaxed text-secondary">25년 업력으로 축적된 제조 노하우</p>
+            </div>
+            <span class="chip-patent shrink-0">
+              <span class="material-symbols-outlined !text-sm" aria-hidden="true" style="font-variation-settings:'FILL' 1">verified</span>
+              직접생산
+            </span>
+          </div>
+
+          <figure class="relative mt-8 overflow-hidden rounded-xl bg-night">
+            <img src="/dev-hitop/images/delivery/joint-complete.jpg" alt="교량이음장치 설치 완료 현장"
+                 class="h-36 w-full object-cover object-center opacity-90 sm:h-40 lg:h-36" loading="lazy"
+                 onerror="this.style.display='none'">
+            <div class="absolute inset-0 bg-gradient-to-r from-night/55 via-transparent to-transparent"></div>
+            <figcaption class="absolute bottom-4 left-4 font-display text-[0.62rem] font-bold uppercase tracking-[0.2em] text-white">Completed Quality</figcaption>
+          </figure>
+        </aside>
+      </div>
+
+      <!-- 네 가지 가치를 여백으로 분리한 하나의 에디토리얼 레일로 연결 -->
+      <div class="relative mx-4 mt-5 grid overflow-hidden rounded-xl bg-white ring-1 ring-ink/10 shadow-[0_14px_34px_rgba(25,28,29,0.09)] sm:mx-7 sm:mt-6 lg:mt-6 lg:grid-cols-4 xl:mt-7">
+        
+          <article class="group relative border-b border-ink/10 p-5 last:border-b-0 sm:p-6 lg:border-b-0 lg:border-r lg:last:border-r-0">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="font-display text-xs font-bold tracking-[0.18em] text-accent">01</span>
+              <span class="h-px w-10 bg-ink/15 transition-all duration-300 group-hover:w-16 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="text-[1.02rem] font-extrabold text-ink">신뢰의 기술</h3>
+            <p class="mt-2 text-sm leading-relaxed text-secondary">등록 특허 5건 · 공식 인증 6종으로 입증된 기술력</p>
+          </article>
+        
+          <article class="group relative border-b border-ink/10 p-5 last:border-b-0 sm:p-6 lg:border-b-0 lg:border-r lg:last:border-r-0">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="font-display text-xs font-bold tracking-[0.18em] text-accent">02</span>
+              <span class="h-px w-10 bg-ink/15 transition-all duration-300 group-hover:w-16 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="text-[1.02rem] font-extrabold text-ink">최상의 내구성</h3>
+            <p class="mt-2 text-sm leading-relaxed text-secondary">가혹한 현장 환경에서도 변함없는 성능 유지</p>
+          </article>
+        
+          <article class="group relative border-b border-ink/10 p-5 last:border-b-0 sm:p-6 lg:border-b-0 lg:border-r lg:last:border-r-0">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="font-display text-xs font-bold tracking-[0.18em] text-accent">03</span>
+              <span class="h-px w-10 bg-ink/15 transition-all duration-300 group-hover:w-16 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="text-[1.02rem] font-extrabold text-ink">직접 생산</h3>
+            <p class="mt-2 text-sm leading-relaxed text-secondary">교량이음장치 · 목재덱 직접생산확인서 보유</p>
+          </article>
+        
+          <article class="group relative border-b border-ink/10 p-5 last:border-b-0 sm:p-6 lg:border-b-0 lg:border-r lg:last:border-r-0">
+            <div class="mb-5 flex items-center justify-between">
+              <span class="font-display text-xs font-bold tracking-[0.18em] text-accent">04</span>
+              <span class="h-px w-10 bg-ink/15 transition-all duration-300 group-hover:w-16 group-hover:bg-accent"></span>
+            </div>
+            <h3 class="text-[1.02rem] font-extrabold text-ink">확실한 사후관리</h3>
+            <p class="mt-2 text-sm leading-relaxed text-secondary">견적부터 납품, 2년 이내 A/S까지 책임 대응</p>
+          </article>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST — 인증 · 특허 · 수치 ══ -->
+<!-- relative + bg 풀블리드: sticky(positioned) 히어로보다 위에 그려지도록 필수 -->
+<section data-trust-section class="relative bg-surface py-24 lg:py-32">
+<div class="container-hi">
+  <div class="flex flex-wrap items-end justify-between gap-6 border-b border-line pb-8" data-reveal>
+    <div>
+      <span class="eyebrow-line">Certifications &amp; Patents</span>
+      <h2 class="mt-3 text-3xl font-extrabold text-ink sm:text-4xl">인증과 특허로 증명합니다</h2>
+    </div>
+    <p class="max-w-sm text-sm leading-relaxed text-secondary">국가가 인증한 기술력. 조달청 나라장터에서 물품식별번호로 직접 조회하실 수 있습니다.</p>
+  </div>
+
+  <!-- 특허 쇼케이스 + 인증 6종 리스트 -->
+  <div class="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14" data-reveal>
+
+    <!-- 좌: 특허 쇼케이스 (실물 특허증 5장 내장) -->
+    <div class="card relative overflow-hidden p-7 sm:p-8 lg:col-span-7">
+      <span class="absolute inset-y-0 left-0 w-1 bg-accent"></span>
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/80">Registered Patents</p>
+          <p class="mt-2 text-2xl font-extrabold text-ink">등록 특허 <span class="font-display text-primary">5</span>건 보유</p>
+          <p class="mt-1.5 text-sm text-secondary">신축이음장치 분야 독자 기술</p>
+        </div>
+        <a href="/dev-hitop/about/#patents" class="group inline-flex items-center gap-2 font-display text-[0.75rem] font-bold uppercase tracking-[0.18em] text-primary transition-colors hover:text-accent">
+          특허 목록 보기
+          <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
+        </a>
+      </div>
+      <div class="mt-6 grid grid-cols-5 gap-2.5 sm:gap-3" aria-label="특허증">
+        
+          <figure>
+            <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <img src="/dev-hitop/images/certs/patent-2375750.jpg" alt="특허증 제10-2375750호" title="특허증 제10-2375750호"
+                   class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
+                   onerror="this.closest('figure').style.display='none'">
+            </div>
+            <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2375750</figcaption>
+          </figure>
+        
+          <figure>
+            <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <img src="/dev-hitop/images/certs/patent-2401961.jpg" alt="특허증 제10-2401961호" title="특허증 제10-2401961호"
+                   class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
+                   onerror="this.closest('figure').style.display='none'">
+            </div>
+            <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2401961</figcaption>
+          </figure>
+        
+          <figure>
+            <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <img src="/dev-hitop/images/certs/patent-2503300.jpg" alt="특허증 제10-2503300호" title="특허증 제10-2503300호"
+                   class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
+                   onerror="this.closest('figure').style.display='none'">
+            </div>
+            <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2503300</figcaption>
+          </figure>
+        
+          <figure>
+            <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <img src="/dev-hitop/images/certs/patent-2622949.jpg" alt="특허증 제10-2622949호" title="특허증 제10-2622949호"
+                   class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
+                   onerror="this.closest('figure').style.display='none'">
+            </div>
+            <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2622949</figcaption>
+          </figure>
+        
+          <figure>
+            <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <img src="/dev-hitop/images/certs/patent-2671452.jpg" alt="특허증 제10-2671452호" title="특허증 제10-2671452호"
+                   class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
+                   onerror="this.closest('figure').style.display='none'">
+            </div>
+            <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2671452</figcaption>
+          </figure>
+        
+      </div>
+    </div>
+
+    <!-- 우: 인증 6종 — 넘버드 리스트 -->
+    <div class="lg:col-span-5">
+      
+      
+        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 border-t">
+          <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">01</span>조달청 등록제품
+          </h3>
+          <p class="text-right text-xs text-secondary/80">나라장터 우수제품</p>
+        </div>
+      
+        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+          <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">02</span>벤처기업
+          </h3>
+          <p class="text-right text-xs text-secondary/80">혁신성장유형 ~2026.11.07</p>
+        </div>
+      
+        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+          <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">03</span>창업기업
+          </h3>
+          <p class="text-right text-xs text-secondary/80">중소벤처기업부 인증</p>
+        </div>
+      
+        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+          <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">04</span>장애인기업
+          </h3>
+          <p class="text-right text-xs text-secondary/80">장애인기업 확인서</p>
+        </div>
+      
+        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+          <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">05</span>G-PASS
+          </h3>
+          <p class="text-right text-xs text-secondary/80">해외조달시장 진출 유망기업</p>
+        </div>
+      
+        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+          <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">06</span>중소기업
+          </h3>
+          <p class="text-right text-xs text-secondary/80">중소기업 확인서</p>
+        </div>
+      
+    </div>
+  </div>
+
+  <!-- 수치 — 카운터 -->
+  <div class="mt-20 grid grid-cols-2 gap-y-12 border-t border-line pt-14 md:grid-cols-4" data-reveal>
+    
+    
+      <div class="px-4 text-center md:px-6 md:border-r md:border-line">
+        <div class="counter font-display text-5xl font-extrabold tracking-tight text-ink lg:text-6xl" data-target="74" data-suffix="">74<em class="not-italic"></em></div>
+        <p class="mt-3 font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/70">Registered Products</p>
+        <p class="mt-2.5 text-sm text-secondary">나라장터 등록 — 교량 53 · 논슬립 15 · 목재덱 6</p>
+      </div>
+    
+      <div class="px-4 text-center md:px-6 md:border-r md:border-line">
+        <div class="counter font-display text-5xl font-extrabold tracking-tight text-ink lg:text-6xl" data-target="25" data-suffix="년">25<em class="not-italic">년</em></div>
+        <p class="mt-3 font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/70">Years in Business</p>
+        <p class="mt-2.5 text-sm text-secondary">한 분야에서 쌓아온 제조 전문성</p>
+      </div>
+    
+      <div class="px-4 text-center md:px-6 md:border-r md:border-line">
+        <div class="counter font-display text-5xl font-extrabold tracking-tight text-ink lg:text-6xl" data-target="5" data-suffix="">5<em class="not-italic"></em></div>
+        <p class="mt-3 font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/70">Patents</p>
+        <p class="mt-2.5 text-sm text-secondary">신축이음장치 분야 등록 특허</p>
+      </div>
+    
+      <div class="px-4 text-center md:px-6 ">
+        <div class="counter font-display text-5xl font-extrabold tracking-tight text-ink lg:text-6xl" data-target="6" data-suffix="">6<em class="not-italic"></em></div>
+        <p class="mt-3 font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/70">Certifications</p>
+        <p class="mt-2.5 text-sm text-secondary">조달청 · 벤처기업 · G-PASS 외</p>
+      </div>
+    
+  </div>
+
+  <!-- CTA 밴드 -->
+  <div class="mt-20 overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-[#8e101c] to-accent" data-reveal>
+    <div class="flex flex-col items-start justify-between gap-8 p-9 sm:p-12 lg:flex-row lg:items-center">
+      <div>
+        <h3 class="text-2xl font-extrabold text-white sm:text-3xl">현장에 맞는 제품, 지금 상담하세요</h3>
+        <p class="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">조달청 나라장터(g2b.go.kr)에서 물품식별번호로 직접 조회 · 발주하실 수 있습니다.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="tel:042-825-2009" class="font-display text-2xl font-extrabold text-white transition-opacity hover:opacity-80">042-825-2009</a>
+        <a href="/dev-hitop/delivery.html" class="btn-light">납품실적 보기</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ 우측 섹션 인디케이터 ══ -->
+<nav class="section-dots" data-section-dots aria-label="섹션 이동">
+  <button type="button" data-dot="hero" aria-label="인트로"></button>
+  <button type="button" data-dot="products" aria-label="제품안내"></button>
+  <button type="button" data-dot="values" aria-label="핵심 가치"></button>
+  <button type="button" data-dot="trust" aria-label="인증 및 특허"></button>
+</nav>
+
+<!-- ══ 플로팅 퀵 메뉴 ══ -->
+<div class="fixed bottom-24 right-4 z-40 flex flex-col items-center gap-3">
+  <a href="/dev-hitop/products-bridge.html" class="grid h-12 w-12 place-items-center rounded-full bg-white text-primary shadow-lg ring-1 ring-line transition-all hover:scale-110" title="제품 보기">
+    <span class="material-symbols-outlined" aria-hidden="true">description</span>
+  </a>
+  <a href="tel:042-825-2009" class="grid h-12 w-12 place-items-center rounded-full bg-accent text-white shadow-[0_8px_30px_rgba(177,21,42,0.35)] transition-all hover:scale-110 hover:bg-accent-hover" title="전화 문의">
+    <span class="material-symbols-outlined" aria-hidden="true">call</span>
+  </a>
+</div>
+
+  </main>
+
+  <footer class="relative border-t border-line bg-section text-on-section-variant">
+  <div class="container-hi">
+
+    <!-- 상단: 브랜드 + 고객센터 -->
+    <div class="flex flex-col justify-between gap-8 border-b border-ink/10 py-14 md:flex-row md:items-end">
+      <div>
+        <img src="/dev-hitop/images/brand/logo.png" alt="주식회사 하이탑" class="h-9 w-auto object-contain">
+        <p class="mt-5 max-w-md text-sm leading-relaxed">
+          교량이음장치 · 논슬립 · 목재덱 전문 제조기업.<br>
+          직접 생산부터 사후관리까지 책임집니다.
+        </p>
+      </div>
+      <div class="md:text-right">
+        <p class="font-display text-[0.7rem] font-bold uppercase tracking-[0.25em] text-secondary/80">Customer Center</p>
+        <a href="tel:042-825-2009" class="mt-2 block font-display text-3xl font-extrabold text-ink transition-colors hover:text-accent">042-825-2009</a>
+        <p class="mt-1.5 text-xs">평일 09:00 – 18:00 (주말/공휴일 휴무) · yong91210@naver.com</p>
+      </div>
+    </div>
+
+    <!-- 중단: 링크 -->
+    <div class="grid grid-cols-2 gap-10 py-12 md:grid-cols-4">
+      <div class="col-span-2 md:col-span-2">
+        <h5 class="mb-4 font-display text-[0.7rem] font-bold uppercase tracking-[0.25em] text-secondary/80">Company</h5>
+        <p class="text-sm leading-relaxed">
+          대전광역시 유성구 계룡로105번길 15 한진오피스텔 11층 1110호<br>
+          대표: 이용화 · 사업자번호: 879-87-01857<br>
+          Tel: 042-825-2009 · Fax: 041-584-2011
+        </p>
+        <p class="mt-4 font-display text-xs uppercase tracking-wider text-secondary/70">조달청 등록 · 벤처기업 · G-PASS 인증</p>
+      </div>
+
+      <div>
+        <h5 class="mb-4 font-display text-[0.7rem] font-bold uppercase tracking-[0.25em] text-secondary/80">Products</h5>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/dev-hitop/products-bridge.html" class="transition-colors hover:text-primary">교량이음장치</a></li>
+          <li><a href="/dev-hitop/products-nonslip.html" class="transition-colors hover:text-primary">논슬립</a></li>
+          <li><a href="/dev-hitop/products-deck.html" class="transition-colors hover:text-primary">목재덱</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="mb-4 font-display text-[0.7rem] font-bold uppercase tracking-[0.25em] text-secondary/80">Quick Links</h5>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/dev-hitop/about/" class="transition-colors hover:text-primary">회사소개</a></li>
+          <li><a href="/dev-hitop/delivery.html" class="transition-colors hover:text-primary">납품실적</a></li>
+          <li><a href="/dev-hitop/about/#location" class="transition-colors hover:text-primary">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 하단 바 -->
+  <div class="border-t border-ink/10">
+    <div class="container-hi flex flex-col gap-1.5 py-6 text-xs text-secondary/80 sm:flex-row sm:items-center sm:justify-between">
+      <span>© 2025 주식회사 하이탑 (HITOP Co., Ltd.). All rights reserved.</span>
+      <span class="font-display tracking-wide">A Constant Challenge for a Better Future.</span>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/dev-hitop/js/main.js" defer></script>
+</body>
+</html>
