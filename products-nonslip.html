@@ -27,10 +27,26 @@
         
       
         
-          <a href="/dev-hitop/about/" class="navbar-link ">회사소개</a>
+          
+          <div class="group relative">
+            <a href="/dev-hitop/about/" class="navbar-link flex items-center gap-1">
+              회사소개
+              <span class="material-symbols-outlined text-base" aria-hidden="true">expand_more</span>
+            </a>
+            <div class="nav-dropdown">
+              
+                <a href="/dev-hitop/about/">인사말</a>
+              
+                <a href="/dev-hitop/about/history/">연혁</a>
+              
+                <a href="/dev-hitop/about/certifications/">산업재산권 및 인증</a>
+              
+            </div>
+          </div>
         
       
         
+          
           <div class="group relative">
             <a href="#" class="navbar-link flex items-center gap-1">
               제품안내
@@ -74,7 +90,14 @@
       
     
       
-        <a href="/dev-hitop/about/" class="transition-colors hover:text-accent">회사소개</a>
+        <span class="font-display text-xs font-bold uppercase tracking-[0.25em] text-secondary/70">회사소개</span>
+        
+          <a href="/dev-hitop/about/" class="transition-colors hover:text-accent">인사말</a>
+        
+          <a href="/dev-hitop/about/history/" class="transition-colors hover:text-accent">연혁</a>
+        
+          <a href="/dev-hitop/about/certifications/" class="transition-colors hover:text-accent">산업재산권 및 인증</a>
+        
       
     
       
@@ -100,11 +123,8 @@
   <main>
     
 <section class="relative mt-20 h-[36vh] min-h-[280px] max-h-[380px] overflow-hidden bg-night">
-  <picture class="absolute inset-0 block h-full w-full">
-    <source media="(min-width: 768px)" srcset="/dev-hitop/images/products/nonslip/diamond.jpg">
-    <img src="/dev-hitop/images/home/nonslip-install-01.jpg" alt="계단에 시공된 하이탑 논슬립 제품"
-         class="h-full w-full object-cover object-[center_82%]" width="330" height="178" fetchpriority="high">
-  </picture>
+  <img src="/dev-hitop/images/products/nonslip/install/hero.jpg" alt="계단에 시공된 하이탑 논슬립 제품"
+       class="absolute inset-0 h-full w-full object-cover object-[center_55%]" width="842" height="530" fetchpriority="high">
   <div class="absolute inset-0 bg-night/50"></div>
   <div class="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-night/70 to-transparent"></div>
 
@@ -124,591 +144,523 @@
     <div class="grid items-end gap-7 lg:grid-cols-12 lg:gap-12">
       <div class="lg:col-span-7">
         <span class="eyebrow-line">Product Portfolio</span>
-        <h2 class="mt-4 text-3xl font-extrabold leading-snug text-ink sm:text-4xl">보행 환경에 맞춘 11개 제품군</h2>
+        <h2 class="mt-4 text-3xl font-extrabold leading-snug text-ink sm:text-4xl">
+          보행 환경에 맞춘 4개 제품군
+        </h2>
       </div>
       <p class="border-t border-ink/15 pt-5 leading-relaxed text-secondary lg:col-span-5">
         계단·교량 보도·경사로 등 적용 장소와 하중 조건을 고려해 소재와 구성을 선택할 수 있습니다.
-        각 제품의 주요 소재와 적용 환경을 함께 확인해 보세요.
+        조달청 나라장터에 등록된 제품은 조달식별번호로 바로 조회하실 수 있습니다.
       </p>
     </div>
 
-    <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <nav class="mt-10 flex flex-wrap gap-3" aria-label="제품군 바로가기">
       
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/diamond.jpg" alt="다이아 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">01</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Diamond Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">다이아 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">다이아몬드 패턴 표면 처리로 최고 수준의 미끄럼 방지 효과를 제공합니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">Diamond Pattern</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">계단·보도</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">강력한 미끄럼 방지 성능</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">내마모성 우수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">계단·보도 적용</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">—</span>
-            </div>
-          </div>
-        </article>
+        <a href="#ceramic" class="filter-pill">세라믹 논슬립</a>
       
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/ceramic.jpg" alt="세라믹 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">02</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Ceramic Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">세라믹 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">고온 소성 세라믹 입자를 접착하여 내열·내화학성이 뛰어난 미끄럼 방지 제품입니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">Ceramic</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">옥외·교량 보도</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">내열·내화학성 우수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">습윤 환경에 적합</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">옥외·교량 보도 적용</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">내열·내화학성</span>
-            </div>
-          </div>
-        </article>
+        <a href="#tungsten" class="filter-pill">텅스텐 논슬립</a>
       
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/tungsten.jpg" alt="텅스텐 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">03</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Tungsten Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">텅스텐 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">텅스텐 카바이드 소재를 적용하여 극강의 내마모성과 장기 내구성을 자랑합니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">Tungsten Carbide</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">중하중 환경</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">최고 수준 내마모성</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">장기 사용 보장</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">중하중 환경 적용</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">최고 내마모성</span>
-            </div>
-          </div>
-        </article>
+        <a href="#sus-ceramic" class="filter-pill">스테인리스 세라믹 논슬립</a>
       
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/stainless.jpg" alt="스테인리스 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">04</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Stainless Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">스테인리스 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">SUS 304 스테인리스 소재로 부식에 강하며 위생적인 환경에 적합합니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">SUS 304</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">위생·식품 환경</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">SUS 304 소재</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">부식 방지 우수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">위생·식품 환경 적합</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">부식 방지</span>
-            </div>
-          </div>
-        </article>
+        <a href="#indoor" class="filter-pill">실내용 논슬립</a>
       
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/aluminum.jpg" alt="알루미늄 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">05</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Aluminum Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">알루미늄 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">경량 알루미늄 합금으로 시공이 간편하며 미적 요소가 뛰어납니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">Aluminum Alloy</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">실내·실외</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">경량 · 시공 용이</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">내식성 우수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">실내·실외 겸용</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">경량</span>
-            </div>
-          </div>
-        </article>
-      
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/brass.jpg" alt="황동 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">06</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Brass Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">황동 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">황동 소재로 심미적 가치가 높으며 고급 건축물 계단에 적합합니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">Brass</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">실내 고급 계단</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">고급 마감 처리</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">심미성 우수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">실내 고급 계단 적용</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">심미성 우수</span>
-            </div>
-          </div>
-        </article>
-      
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/carborundum.jpg" alt="카보런덤 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">07</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Carborundum Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">카보런덤 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">탄화규소(SiC) 입자를 사용하여 강력한 표면 마찰력을 제공합니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">SiC (탄화규소)</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">산업 시설</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">고마찰 계수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">습윤 환경 우수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">산업 시설 적합</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">고마찰 계수</span>
-            </div>
-          </div>
-        </article>
-      
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/tape.jpg" alt="논슬립 테이프형"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">08</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Non-Slip Tape</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">논슬립 테이프형</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">접착식 테이프 형태로 기존 구조물에 간편하게 부착하여 사용 가능합니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">복합 소재</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">기존 시설 개보수</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">접착식 간편 시공</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">기존 시설 개보수 적합</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">다양한 색상 선택</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">접착식</span>
-            </div>
-          </div>
-        </article>
-      
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/pe.jpg" alt="PE 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">09</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">PE Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">PE 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">폴리에틸렌 소재로 가볍고 충격 흡수력이 우수하며 저온 환경에서도 성능을 유지합니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">Polyethylene</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">저온 환경</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">경량 · 충격 흡수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">저온 내성 우수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">친환경 소재</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">친환경</span>
-            </div>
-          </div>
-        </article>
-      
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/rubber.jpg" alt="고무 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">10</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Rubber Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">고무 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">천연·합성 고무 소재로 탄성과 미끄럼 방지 기능이 우수하며 소음 감소 효과가 있습니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">Rubber (천연/합성)</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">다목적</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">탄성 · 소음 감소</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">미끄럼 방지 우수</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">다목적 환경 적용</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">소음 감소</span>
-            </div>
-          </div>
-        </article>
-      
-        <article class="group flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
-          <div class="relative h-48 overflow-hidden bg-section">
-            <img src="/dev-hitop/images/products/nonslip/composite.jpg" alt="복합소재 논슬립"
-                 class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                 loading="lazy" onerror="this.style.display='none'">
-            <div class="absolute inset-0 bg-gradient-to-t from-night/65 via-transparent to-night/10"></div>
-            <span class="absolute left-5 top-4 font-display text-xs font-bold tracking-[0.18em] text-white/70">11</span>
-            <span class="absolute bottom-4 left-5 font-display text-[0.62rem] font-bold uppercase tracking-[0.16em] text-white/65">Composite Non-Slip</span>
-          </div>
-
-          <div class="flex flex-1 flex-col p-6">
-            <h3 class="text-xl font-extrabold text-ink">복합소재 논슬립</h3>
-            <p class="mt-4 text-sm leading-relaxed text-secondary">두 가지 이상의 소재를 복합하여 각 소재의 장점을 최대화한 고성능 제품입니다.</p>
-
-            <div class="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-line ring-1 ring-line">
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Material</p>
-                <p class="mt-1 text-xs font-bold text-ink">Composite</p>
-              </div>
-              <div class="bg-surface px-3.5 py-3">
-                <p class="font-display text-[0.6rem] font-bold uppercase tracking-[0.15em] text-secondary/65">Application</p>
-                <p class="mt-1 text-xs font-bold text-ink">맞춤 환경</p>
-              </div>
-            </div>
-
-            <div class="mt-5 flex-1">
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">01</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">복합 소재 최적화</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 ">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">02</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">다기능 성능</p>
-                </div>
-              
-                <div class="grid grid-cols-[2rem_1fr] gap-2 border-t border-ink/10 py-3 border-b">
-                  <span class="font-display text-[0.62rem] font-bold text-accent">03</span>
-                  <p class="text-[0.8rem] leading-relaxed text-ink/75">맞춤형 사양 제작 가능</p>
-                </div>
-              
-            </div>
-
-            <div class="mt-5 flex items-center justify-between gap-4">
-              <span class="font-display text-[0.62rem] font-bold uppercase tracking-[0.15em] text-secondary/60">Performance</span>
-              <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 text-xs font-bold text-primary">주문 제작 가능</span>
-            </div>
-          </div>
-        </article>
-      
-    </div>
+    </nav>
   </div>
 </section>
+
+
+  <section id="ceramic" class="scroll-mt-20 border-b border-line py-14 lg:py-20 bg-white">
+    <div class="container-hi">
+
+      <div class="grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-14">
+        <div class="lg:col-span-6">
+          <span class="font-display text-xs font-bold tracking-[0.2em] text-accent">01</span>
+          <h2 class="mt-3 text-3xl font-extrabold leading-snug text-ink sm:text-4xl">세라믹 논슬립</h2>
+          <p class="mt-2 font-display text-[0.7rem] font-bold uppercase tracking-[0.18em] text-secondary/70">Ceramic Non-Slip</p>
+          <p class="mt-5 text-pretty leading-relaxed text-secondary">내마모성 강도가 우수한 세라믹 패드 제품군입니다.</p>
+          
+            <ul class="mt-6 space-y-2 border-t border-ink/12 pt-5">
+              
+                <li class="flex gap-2.5 text-sm leading-relaxed text-secondary">
+                  <span class="text-accent" aria-hidden="true">*</span><span>축광 제품은 비상시 유도선으로 적합합니다.</span>
+                </li>
+              
+                <li class="flex gap-2.5 text-sm leading-relaxed text-secondary">
+                  <span class="text-accent" aria-hidden="true">*</span><span>색상 — 노랑 · 오렌지 · 블루 · 스톤 · 와인 · 녹색 · 밤색 · 회색투톤 · 회색 · 검정 · 퍼플 · 사선 (제품별 색상 문의)</span>
+                </li>
+              
+            </ul>
+          
+        </div>
+        <div class="lg:col-span-6">
+          <figure class="overflow-hidden rounded-xl ring-1 ring-line shadow-sm">
+            <img src="/dev-hitop/images/products/nonslip/install/ceramic.jpg" alt="계단에 시공된 다이아패턴 세라믹 논슬립"
+                 class="aspect-[16/10] w-full object-cover" loading="lazy">
+          </figure>
+          <figcaption class="mt-2.5 text-xs text-secondary/80">시공 사진</figcaption>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/ht-64ds.jpg" alt="HT-64DS 다이아패턴 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-64DS 다이아패턴</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 64 × t2.5mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25486725
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/ht-62da.jpg" alt="HT-62DA / HT-67DA 다이아패턴 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-62DA / HT-67DA 다이아패턴</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">HT-62DA 1000 × 62 × t2.5mm · 앞발길이 20mm / HT-67DA 1000 × 67 × t2.5mm · 앞발길이 25mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      HT-62DA · 조달 25571141
+                    </span>
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      HT-67DA · 조달 25486724
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/ht-62a.jpg" alt="HT-62A 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-62A</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 62 × t2.5mm · 앞발길이 20mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25583820
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/ht-62laa.jpg" alt="HT-62LAA (축광) 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-62LAA (축광)</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 62 × t2mm · 앞발길이 20mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 26011580
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/ht-70s.jpg" alt="HT-70S 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-70S</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 70 × t2.5mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25571142
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/ht-70ls.jpg" alt="HT-70LS (축광) 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-70LS (축광)</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 70 × t2mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25571143
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/ht-62la.jpg" alt="HT-62LA (축광) 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-62LA (축광)</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 62 × t2mm · 앞발길이 20mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 26011579
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/ht-75la.jpg" alt="HT-75 (축광) 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-75 (축광)</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">W 75mm · H 25mm · T 2mm</p>
+              
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="tungsten" class="scroll-mt-20 border-b border-line py-14 lg:py-20 bg-section">
+    <div class="container-hi">
+
+      <div class="grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-14">
+        <div class="lg:col-span-6">
+          <span class="font-display text-xs font-bold tracking-[0.2em] text-accent">02</span>
+          <h2 class="mt-3 text-3xl font-extrabold leading-snug text-ink sm:text-4xl">텅스텐 논슬립</h2>
+          <p class="mt-2 font-display text-[0.7rem] font-bold uppercase tracking-[0.18em] text-secondary/70">Tungsten Non-Slip</p>
+          <p class="mt-5 text-pretty leading-relaxed text-secondary">텅스텐 입자를 사용하여 미끄럼 방지 성능을 극대화한 제품군입니다. 반영구적으로 사용할 수 있으며 인테리어 효과가 뛰어납니다.</p>
+          
+        </div>
+        <div class="lg:col-span-6">
+          <figure class="overflow-hidden rounded-xl ring-1 ring-line shadow-sm">
+            <img src="/dev-hitop/images/products/nonslip/install/tungsten.jpg" alt="계단에 시공된 텅스텐 논슬립"
+                 class="aspect-[16/10] w-full object-cover" loading="lazy">
+          </figure>
+          <figcaption class="mt-2.5 text-xs text-secondary/80">시공 사진</figcaption>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/tungsten-55.jpg" alt="텅스텐 55 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">텅스텐 55</h3>
+              
+                <p class="text-xs text-secondary/80">조달 등록명 HT-55TA-03 / HT-55TA-04</p>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 55 × t1mm · 앞발길이 20mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25486728
+                    </span>
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25486729
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/tungsten-50.jpg" alt="텅스텐 50 평 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">텅스텐 50 평</h3>
+              
+                <p class="text-xs text-secondary/80">조달 등록명 HTT-50S</p>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 50 × t1mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25568360
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/al-tungsten-72.jpg" alt="AL텅스텐 72 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">AL텅스텐 72</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">W 72mm · H 25mm · T 3mm</p>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/al-tungsten-74.jpg" alt="AL텅스텐 74 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">AL텅스텐 74</h3>
+              
+                <p class="text-xs text-secondary/80">조달 등록명 HT-74TS-01 / HT-74TS-02</p>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 74 × t3mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25486726
+                    </span>
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25486727
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/al-tungsten-65-lum.jpg" alt="AL텅스텐 65 축광 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">AL텅스텐 65 축광</h3>
+              
+                <p class="text-xs text-secondary/80">조달 등록명 HTT-65LA</p>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 65 × t3.2mm · 앞발길이 25mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25571140
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/tungsten-55-lum.jpg" alt="텅스텐 55 축광 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">텅스텐 55 축광</h3>
+              
+                <p class="text-xs text-secondary/80">조달 등록명 HTT-55LA</p>
+              
+              <p class="text-sm leading-relaxed text-secondary">1000 × 55 × t1mm · 앞발길이 20mm</p>
+              
+                <div class="mt-auto flex flex-wrap gap-2 pt-3">
+                  
+                    <span class="rounded-full border border-primary/15 bg-primary/[0.05] px-3 py-1.5 font-display text-xs font-bold text-primary">
+                      조달 25568361
+                    </span>
+                  
+                </div>
+              
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="sus-ceramic" class="scroll-mt-20 border-b border-line py-14 lg:py-20 bg-white">
+    <div class="container-hi">
+
+      <div class="grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-14">
+        <div class="lg:col-span-6">
+          <span class="font-display text-xs font-bold tracking-[0.2em] text-accent">03</span>
+          <h2 class="mt-3 text-3xl font-extrabold leading-snug text-ink sm:text-4xl">스테인리스 세라믹 논슬립</h2>
+          <p class="mt-2 font-display text-[0.7rem] font-bold uppercase tracking-[0.18em] text-secondary/70">Stainless Ceramic Non-Slip</p>
+          <p class="mt-5 text-pretty leading-relaxed text-secondary">내구성과 내마모성이 우수한 고강도 스테인리스 세라믹 제품군입니다.</p>
+          
+        </div>
+        <div class="lg:col-span-6">
+          <figure class="overflow-hidden rounded-xl ring-1 ring-line shadow-sm">
+            <img src="/dev-hitop/images/products/nonslip/install/sus-ceramic.jpg" alt="계단에 시공된 스테인리스 세라믹 논슬립"
+                 class="aspect-[16/10] w-full object-cover" loading="lazy">
+          </figure>
+          <figcaption class="mt-2.5 text-xs text-secondary/80">시공 사진</figcaption>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/sus-ceramic-65-75.jpg" alt="HT-65 / HT-75 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-65 / HT-75</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">HT-65 W 65mm · H 25mm · T 2mm / HT-75 W 75mm · H 25mm · T 2mm</p>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/sus-ceramic-75.jpg" alt="HT-75 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-75</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">W 75mm · H 25mm · T 2mm</p>
+              
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="indoor" class="scroll-mt-20 border-b border-line py-14 lg:py-20 bg-section">
+    <div class="container-hi">
+
+      <div class="grid gap-8 lg:grid-cols-12 lg:items-center lg:gap-14">
+        <div class="lg:col-span-6">
+          <span class="font-display text-xs font-bold tracking-[0.2em] text-accent">04</span>
+          <h2 class="mt-3 text-3xl font-extrabold leading-snug text-ink sm:text-4xl">실내용 논슬립</h2>
+          <p class="mt-2 font-display text-[0.7rem] font-bold uppercase tracking-[0.18em] text-secondary/70">Indoor Non-Slip</p>
+          <p class="mt-5 text-pretty leading-relaxed text-secondary">실내 미끄럼 방지용으로 안전사고 예방에 적합한 제품군입니다.</p>
+          
+        </div>
+        <div class="lg:col-span-6">
+          <figure class="overflow-hidden rounded-xl ring-1 ring-line shadow-sm">
+            <img src="/dev-hitop/images/products/nonslip/install/indoor.jpg" alt="실내 계단에 시공된 실내용 논슬립"
+                 class="aspect-[16/10] w-full object-cover" loading="lazy">
+          </figure>
+          <figcaption class="mt-2.5 text-xs text-secondary/80">시공 사진</figcaption>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/indoor-65.jpg" alt="HT-65 실내용 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-65 실내용</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">W 65mm · H 25mm · T 2mm</p>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/indoor-64.jpg" alt="HT-64 실내용 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-64 실내용</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">W 64mm · T 2mm</p>
+              
+            </div>
+          </article>
+        
+          <article class="flex h-full flex-col overflow-hidden rounded-xl bg-white ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:ring-primary/20 hover:shadow-[0_18px_45px_rgba(25,28,29,0.10)]">
+            <div class="flex aspect-[4/3] items-center justify-center bg-white p-5">
+              <img src="/dev-hitop/images/products/nonslip/indoor-67.jpg" alt="HT-67 실내용 (3M, VSM) 논슬립 제품 사진"
+                   class="h-full w-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 border-t border-line p-5">
+              <h3 class="text-lg font-extrabold leading-snug text-ink">HT-67 실내용 (3M, VSM)</h3>
+              
+              <p class="text-sm leading-relaxed text-secondary">W 67mm · H 25mm · T 2.5mm</p>
+              
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  </section>
+
 
 <section class="border-b border-line bg-white py-14 lg:py-18">
   <div class="container-hi">
     <div class="grid gap-7 lg:grid-cols-12 lg:items-center lg:gap-12">
       <div class="lg:col-span-5">
         <span class="eyebrow-line">Procurement Information</span>
-        <h2 class="mt-4 text-2xl font-extrabold leading-snug text-ink sm:text-3xl">상세 규격과 물품식별번호 안내</h2>
+        <h2 class="mt-4 text-2xl font-extrabold leading-snug text-ink sm:text-3xl">상세 규격과 색상 안내</h2>
       </div>
       <div class="border-t border-ink/15 pt-5 lg:col-span-7">
         <p class="leading-relaxed text-secondary">
-          논슬립 제품의 상세 규격과 조달청 물품식별번호, 사양서는 제품 문의를 통해 안내해 드립니다.
+          제품별 색상과 상세 사양서는 제품 문의를 통해 안내해 드립니다.
           설치 장소와 사용 환경을 알려주시면 현장 조건에 맞는 제품을 검토할 수 있습니다.
         </p>
       </div>

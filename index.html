@@ -27,10 +27,26 @@
         
       
         
-          <a href="/dev-hitop/about/" class="navbar-link ">회사소개</a>
+          
+          <div class="group relative">
+            <a href="/dev-hitop/about/" class="navbar-link flex items-center gap-1">
+              회사소개
+              <span class="material-symbols-outlined text-base" aria-hidden="true">expand_more</span>
+            </a>
+            <div class="nav-dropdown">
+              
+                <a href="/dev-hitop/about/">인사말</a>
+              
+                <a href="/dev-hitop/about/history/">연혁</a>
+              
+                <a href="/dev-hitop/about/certifications/">산업재산권 및 인증</a>
+              
+            </div>
+          </div>
         
       
         
+          
           <div class="group relative">
             <a href="#" class="navbar-link flex items-center gap-1">
               제품안내
@@ -74,7 +90,14 @@
       
     
       
-        <a href="/dev-hitop/about/" class="transition-colors hover:text-accent">회사소개</a>
+        <span class="font-display text-xs font-bold uppercase tracking-[0.25em] text-secondary/70">회사소개</span>
+        
+          <a href="/dev-hitop/about/" class="transition-colors hover:text-accent">인사말</a>
+        
+          <a href="/dev-hitop/about/history/" class="transition-colors hover:text-accent">연혁</a>
+        
+          <a href="/dev-hitop/about/certifications/" class="transition-colors hover:text-accent">산업재산권 및 인증</a>
+        
       
     
       
@@ -352,7 +375,7 @@
           <p class="mt-2 text-2xl font-extrabold text-ink">등록 특허 <span class="font-display text-primary">5</span>건 보유</p>
           <p class="mt-1.5 text-sm text-secondary">신축이음장치 분야 독자 기술</p>
         </div>
-        <a href="/dev-hitop/about/#patents" class="group inline-flex items-center gap-2 font-display text-[0.75rem] font-bold uppercase tracking-[0.18em] text-primary transition-colors hover:text-accent">
+        <a href="/dev-hitop/about/certifications/" class="group inline-flex items-center gap-2 font-display text-[0.75rem] font-bold uppercase tracking-[0.18em] text-primary transition-colors hover:text-accent">
           특허 목록 보기
           <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
         </a>
@@ -361,7 +384,7 @@
         
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <img src="/dev-hitop/images/certs/patent-2375750.jpg" alt="특허증 제10-2375750호" title="특허증 제10-2375750호"
+              <img src="/dev-hitop/images/certs/patent-2375750-sm.jpg" alt="특허증 제10-2375750호 방수성이 향상된 신축이음장치" title="특허증 제10-2375750호"
                    class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
                    onerror="this.closest('figure').style.display='none'">
             </div>
@@ -370,7 +393,7 @@
         
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <img src="/dev-hitop/images/certs/patent-2401961.jpg" alt="특허증 제10-2401961호" title="특허증 제10-2401961호"
+              <img src="/dev-hitop/images/certs/patent-2401961-sm.jpg" alt="특허증 제10-2401961호 교량 연석부의 신축이음장치 연결방법" title="특허증 제10-2401961호"
                    class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
                    onerror="this.closest('figure').style.display='none'">
             </div>
@@ -379,7 +402,7 @@
         
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <img src="/dev-hitop/images/certs/patent-2503300.jpg" alt="특허증 제10-2503300호" title="특허증 제10-2503300호"
+              <img src="/dev-hitop/images/certs/patent-2503300-sm.jpg" alt="특허증 제10-2503300호 보강형 확장 인도교" title="특허증 제10-2503300호"
                    class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
                    onerror="this.closest('figure').style.display='none'">
             </div>
@@ -388,7 +411,7 @@
         
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <img src="/dev-hitop/images/certs/patent-2622949.jpg" alt="특허증 제10-2622949호" title="특허증 제10-2622949호"
+              <img src="/dev-hitop/images/certs/patent-2622949-sm.jpg" alt="특허증 제10-2622949호 진동 및 소음 저감형 신축이음장치" title="특허증 제10-2622949호"
                    class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
                    onerror="this.closest('figure').style.display='none'">
             </div>
@@ -397,7 +420,7 @@
         
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <img src="/dev-hitop/images/certs/patent-2671452.jpg" alt="특허증 제10-2671452호" title="특허증 제10-2671452호"
+              <img src="/dev-hitop/images/certs/patent-2671452-sm.jpg" alt="특허증 제10-2671452호 앵커의 각도 조절이 가능한 신축이음장치" title="특허증 제10-2671452호"
                    class="aspect-[210/297] w-full object-cover object-top" loading="lazy"
                    onerror="this.closest('figure').style.display='none'">
             </div>
@@ -407,50 +430,57 @@
       </div>
     </div>
 
-    <!-- 우: 인증 6종 — 넘버드 리스트 -->
+    <!-- 우: 공식 인증 — 넘버드 리스트 -->
     <div class="lg:col-span-5">
       
       
         <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 border-t">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
-            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">01</span>조달청 등록제품
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">01</span>벤처기업 확인서
           </h3>
-          <p class="text-right text-xs text-secondary/80">나라장터 우수제품</p>
+          <p class="text-right text-xs text-secondary/80">~ 2026.11.07</p>
         </div>
       
         <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
-            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">02</span>벤처기업
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">02</span>창업기업 확인서
           </h3>
-          <p class="text-right text-xs text-secondary/80">혁신성장유형 ~2026.11.07</p>
+          <p class="text-right text-xs text-secondary/80">2024.01.04 ~ 2027.01.04</p>
         </div>
       
         <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
-            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">03</span>창업기업
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">03</span>장애인기업 확인서
           </h3>
-          <p class="text-right text-xs text-secondary/80">중소벤처기업부 인증</p>
+          <p class="text-right text-xs text-secondary/80">2025.03.04 ~ 2028.03.03</p>
         </div>
       
         <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
-            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">04</span>장애인기업
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">04</span>중소기업 확인서
           </h3>
-          <p class="text-right text-xs text-secondary/80">장애인기업 확인서</p>
+          <p class="text-right text-xs text-secondary/80">2026.04.01 ~ 2027.03.31</p>
         </div>
       
         <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
-            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">05</span>G-PASS
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">05</span>G-PASS 기업 지정서
           </h3>
-          <p class="text-right text-xs text-secondary/80">해외조달시장 진출 유망기업</p>
+          <p class="text-right text-xs text-secondary/80">2026.03.19 ~ 2031.03.18</p>
         </div>
       
         <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
-            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">06</span>중소기업
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">06</span>직접생산확인증명서 (목재덱)
           </h3>
-          <p class="text-right text-xs text-secondary/80">중소기업 확인서</p>
+          <p class="text-right text-xs text-secondary/80">2025.03.19 ~ 2027.03.18</p>
+        </div>
+      
+        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+          <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
+            <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">07</span>직접생산확인증명서 (교량이음장치)
+          </h3>
+          <p class="text-right text-xs text-secondary/80">2024.10.04 ~ 2026.10.03</p>
         </div>
       
     </div>
