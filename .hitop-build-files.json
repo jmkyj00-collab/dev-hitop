@@ -4,6 +4,16 @@
   "about/index.html",
   "css/style.css",
   "delivery.html",
+  "en/about/certifications/index.html",
+  "en/about/history/index.html",
+  "en/about/index.html",
+  "en/delivery.html",
+  "en/index.html",
+  "en/products-bridge.html",
+  "en/products-deck.html",
+  "en/products-nonslip.html",
+  "en/support/inquiry/index.html",
+  "en/support/notice/index.html",
   "images/about/company-exterior.png",
   "images/brand/logo.png",
   "images/certs/cert-direct-bridge-p2.jpg",
@@ -95,5 +105,7 @@
   "js/main.js",
   "products-bridge.html",
   "products-deck.html",
-  "products-nonslip.html"
+  "products-nonslip.html",
+  "support/inquiry/index.html",
+  "support/notice/index.html"
 ]

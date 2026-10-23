@@ -11,7 +11,9 @@
 </head>
 <body class="bg-surface text-ink">
 
-  <header class="navbar" data-navbar>
+  
+
+<header class="navbar" data-navbar>
   <div class="container-hi flex h-full items-center justify-between">
 
     <!-- 로고 -->
@@ -19,10 +21,11 @@
       <img src="/dev-hitop/images/brand/logo.png" alt="주식회사 하이탑" class="navbar-logo-img">
     </a>
 
-    <!-- 데스크톱·태블릿 메뉴 -->
-    <nav class="hidden items-center gap-10 md:flex lg:gap-12" aria-label="주 메뉴">
+    <!-- 데스크톱 메뉴 (메뉴 5개 + 언어 전환이 들어가므로 lg 미만은 모바일 메뉴 사용) -->
+    <nav class="hidden items-center gap-7 lg:flex xl:gap-12" aria-label="주 메뉴">
       
         
+          
           <a href="/dev-hitop/" class="navbar-link is-active">홈</a>
         
       
@@ -65,15 +68,37 @@
         
       
         
+          
           <a href="/dev-hitop/delivery.html" class="navbar-link ">납품실적</a>
+        
+      
+        
+          
+          <div class="group relative">
+            <a href="/dev-hitop/support/notice/" class="navbar-link flex items-center gap-1">
+              고객지원
+              <span class="material-symbols-outlined text-base" aria-hidden="true">expand_more</span>
+            </a>
+            <div class="nav-dropdown">
+              
+                <a href="/dev-hitop/support/notice/">공지사항</a>
+              
+                <a href="/dev-hitop/support/inquiry/">온라인문의</a>
+              
+            </div>
+          </div>
         
       
     </nav>
 
     <!-- 우측 -->
     <div class="flex items-center gap-5">
-      <a href="/dev-hitop/about/#location" class="btn-accent hidden !px-5 !py-2.5 md:inline-flex">문의하기</a>
-      <button class="text-ink md:hidden" data-nav-toggle
+      <div class="lang-switch flex" aria-label="언어 선택">
+        <a href="/dev-hitop/" lang="ko" hreflang="ko" aria-current="true" class="is-active">KOR</a>
+        <a href="/dev-hitop/en/" lang="en" hreflang="en" >ENG</a>
+      </div>
+      <a href="/dev-hitop/support/inquiry/" class="btn-accent hidden !px-5 !py-2.5 lg:inline-flex">문의하기</a>
+      <button class="text-ink lg:hidden" data-nav-toggle
               aria-label="메뉴 열기" aria-controls="mobile-nav" aria-expanded="false">
         <span class="material-symbols-outlined" aria-hidden="true">menu</span>
       </button>
@@ -82,8 +107,8 @@
 </header>
 
 <!-- 모바일 메뉴 패널 -->
-<div id="mobile-nav" class="fixed inset-0 z-40 hidden bg-white pt-20 md:hidden" data-mobile-nav>
-  <nav class="flex h-full flex-col items-center justify-center gap-6 text-lg font-bold text-ink" aria-label="모바일 메뉴">
+<div id="mobile-nav" class="fixed inset-0 z-40 hidden overflow-y-auto bg-white pt-20 lg:hidden" data-mobile-nav>
+  <nav class="flex min-h-full flex-col items-center justify-center gap-6 py-10 text-lg font-bold text-ink" aria-label="모바일 메뉴">
     
       
         <a href="/dev-hitop/" class="transition-colors hover:text-accent">홈</a>
@@ -115,7 +140,16 @@
         <a href="/dev-hitop/delivery.html" class="transition-colors hover:text-accent">납품실적</a>
       
     
-    <a href="/dev-hitop/about/#location" class="btn-accent mt-2">문의하기</a>
+      
+        <span class="font-display text-xs font-bold uppercase tracking-[0.25em] text-secondary/70">고객지원</span>
+        
+          <a href="/dev-hitop/support/notice/" class="transition-colors hover:text-accent">공지사항</a>
+        
+          <a href="/dev-hitop/support/inquiry/" class="transition-colors hover:text-accent">온라인문의</a>
+        
+      
+    
+    <a href="/dev-hitop/support/inquiry/" class="btn-accent mt-2">문의하기</a>
   </nav>
 </div>
 
@@ -143,12 +177,11 @@
       </p>
       <h1 class="mt-6 text-[2.6rem] font-extrabold leading-[1.18] tracking-tight [text-shadow:0_2px_24px_rgba(11,14,19,0.4)] sm:text-6xl lg:text-[4.2rem]">
         <span class="mask-line"><span>구조물의 안전을 잇는</span></span>
-        <span class="mask-line"><span>정밀 기술, 하이탑</span></span>
+        <span class="mask-line"><span>정밀 기술</span></span>
       </h1>
       <p class="mask-line mask-delay-1 mt-7 max-w-xl">
         <span class="text-base leading-relaxed text-white/80 [text-shadow:0_1px_12px_rgba(11,14,19,0.45)] sm:text-lg">
-          교량이음장치부터 논슬립, 목재덱까지
-          직접 생산한 제품을 사후관리까지 하이탑이 책임집니다.
+          교량이음장치부터 논슬립, 목재덱까지 직접 생산한 제품을 사후관리까지 하이탑이 책임집니다.
         </span>
       </p>
       <div class="mask-line mask-delay-2 mt-10">
@@ -254,9 +287,7 @@
         </h2>
       </div>
       <p class="border-t border-ink/15 pt-5 leading-relaxed text-on-section-variant lg:col-span-5">
-        특허 기술과 엄격한 시험 성적을 통과한 제품만이
-        하이탑의 이름을 갖습니다. 설계와 직접 생산, 사후관리까지
-        하나의 기준으로 완결합니다.
+        특허 기술과 엄격한 시험 성적을 통과한 제품만이 하이탑의 이름을 갖습니다. 설계와 직접 생산, 사후관리까지 하나의 기준으로 완결합니다.
       </p>
     </div>
 
@@ -343,7 +374,7 @@
               <span class="h-px w-10 bg-ink/15 transition-all duration-300 group-hover:w-16 group-hover:bg-accent"></span>
             </div>
             <h3 class="text-[1.02rem] font-extrabold text-ink">확실한 사후관리</h3>
-            <p class="mt-2 text-sm leading-relaxed text-secondary">견적부터 납품, 2년 이내 A/S까지 책임 대응</p>
+            <p class="mt-2 text-sm leading-relaxed text-secondary">견적부터 납품, A/S까지 책임 대응</p>
           </article>
         
       </div>
@@ -372,7 +403,9 @@
       <div class="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p class="font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/80">Registered Patents</p>
-          <p class="mt-2 text-2xl font-extrabold text-ink">등록 특허 <span class="font-display text-primary">5</span>건 보유</p>
+          
+            <p class="mt-2 text-2xl font-extrabold text-ink">등록 특허 <span class="font-display text-primary">5</span>건 보유</p>
+          
           <p class="mt-1.5 text-sm text-secondary">신축이음장치 분야 독자 기술</p>
         </div>
         <a href="/dev-hitop/about/certifications/" class="group inline-flex items-center gap-2 font-display text-[0.75rem] font-bold uppercase tracking-[0.18em] text-primary transition-colors hover:text-accent">
@@ -382,6 +415,7 @@
       </div>
       <div class="mt-6 grid grid-cols-5 gap-2.5 sm:gap-3" aria-label="특허증">
         
+          
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <img src="/dev-hitop/images/certs/patent-2375750-sm.jpg" alt="특허증 제10-2375750호 방수성이 향상된 신축이음장치" title="특허증 제10-2375750호"
@@ -391,6 +425,7 @@
             <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2375750</figcaption>
           </figure>
         
+          
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <img src="/dev-hitop/images/certs/patent-2401961-sm.jpg" alt="특허증 제10-2401961호 교량 연석부의 신축이음장치 연결방법" title="특허증 제10-2401961호"
@@ -400,6 +435,7 @@
             <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2401961</figcaption>
           </figure>
         
+          
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <img src="/dev-hitop/images/certs/patent-2503300-sm.jpg" alt="특허증 제10-2503300호 보강형 확장 인도교" title="특허증 제10-2503300호"
@@ -409,6 +445,7 @@
             <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2503300</figcaption>
           </figure>
         
+          
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <img src="/dev-hitop/images/certs/patent-2622949-sm.jpg" alt="특허증 제10-2622949호 진동 및 소음 저감형 신축이음장치" title="특허증 제10-2622949호"
@@ -418,6 +455,7 @@
             <figcaption class="mt-1.5 hidden text-center font-display text-[0.6rem] font-bold tracking-wide text-secondary/70 sm:block">10-2622949</figcaption>
           </figure>
         
+          
           <figure>
             <div class="overflow-hidden rounded-md ring-1 ring-line transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <img src="/dev-hitop/images/certs/patent-2671452-sm.jpg" alt="특허증 제10-2671452호 앵커의 각도 조절이 가능한 신축이음장치" title="특허증 제10-2671452호"
@@ -434,53 +472,46 @@
     <div class="lg:col-span-5">
       
       
-        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 border-t">
+        <div class="group border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 border-t">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
             <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">01</span>벤처기업 확인서
           </h3>
-          <p class="text-right text-xs text-secondary/80">~ 2026.11.07</p>
         </div>
       
-        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+        <div class="group border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
             <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">02</span>창업기업 확인서
           </h3>
-          <p class="text-right text-xs text-secondary/80">2024.01.04 ~ 2027.01.04</p>
         </div>
       
-        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+        <div class="group border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
             <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">03</span>장애인기업 확인서
           </h3>
-          <p class="text-right text-xs text-secondary/80">2025.03.04 ~ 2028.03.03</p>
         </div>
       
-        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+        <div class="group border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
             <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">04</span>중소기업 확인서
           </h3>
-          <p class="text-right text-xs text-secondary/80">2026.04.01 ~ 2027.03.31</p>
         </div>
       
-        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+        <div class="group border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
             <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">05</span>G-PASS 기업 지정서
           </h3>
-          <p class="text-right text-xs text-secondary/80">2026.03.19 ~ 2031.03.18</p>
         </div>
       
-        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+        <div class="group border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
             <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">06</span>직접생산확인증명서 (목재덱)
           </h3>
-          <p class="text-right text-xs text-secondary/80">2025.03.19 ~ 2027.03.18</p>
         </div>
       
-        <div class="group flex items-baseline justify-between gap-4 border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
+        <div class="group border-b border-line py-[1.06rem] transition-colors duration-300 hover:border-accent/40 ">
           <h3 class="flex items-baseline gap-3.5 text-[0.95rem] font-bold text-ink">
             <span class="font-display text-xs font-bold text-ink/25 transition-colors duration-300 group-hover:text-accent">07</span>직접생산확인증명서 (교량이음장치)
           </h3>
-          <p class="text-right text-xs text-secondary/80">2024.10.04 ~ 2026.10.03</p>
         </div>
       
     </div>
@@ -490,24 +521,28 @@
   <div class="mt-20 grid grid-cols-2 gap-y-12 border-t border-line pt-14 md:grid-cols-4" data-reveal>
     
     
+      
       <div class="px-4 text-center md:px-6 md:border-r md:border-line">
         <div class="counter font-display text-5xl font-extrabold tracking-tight text-ink lg:text-6xl" data-target="74" data-suffix="">74<em class="not-italic"></em></div>
         <p class="mt-3 font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/70">Registered Products</p>
         <p class="mt-2.5 text-sm text-secondary">나라장터 등록 — 교량 53 · 논슬립 15 · 목재덱 6</p>
       </div>
     
+      
       <div class="px-4 text-center md:px-6 md:border-r md:border-line">
         <div class="counter font-display text-5xl font-extrabold tracking-tight text-ink lg:text-6xl" data-target="25" data-suffix="년">25<em class="not-italic">년</em></div>
         <p class="mt-3 font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/70">Years in Business</p>
         <p class="mt-2.5 text-sm text-secondary">한 분야에서 쌓아온 제조 전문성</p>
       </div>
     
+      
       <div class="px-4 text-center md:px-6 md:border-r md:border-line">
         <div class="counter font-display text-5xl font-extrabold tracking-tight text-ink lg:text-6xl" data-target="5" data-suffix="">5<em class="not-italic"></em></div>
         <p class="mt-3 font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/70">Patents</p>
         <p class="mt-2.5 text-sm text-secondary">신축이음장치 분야 등록 특허</p>
       </div>
     
+      
       <div class="px-4 text-center md:px-6 ">
         <div class="counter font-display text-5xl font-extrabold tracking-tight text-ink lg:text-6xl" data-target="6" data-suffix="">6<em class="not-italic"></em></div>
         <p class="mt-3 font-display text-[0.65rem] font-bold uppercase tracking-[0.25em] text-secondary/70">Certifications</p>
@@ -552,7 +587,8 @@
 
   </main>
 
-  <footer class="relative border-t border-line bg-section text-on-section-variant">
+  
+<footer class="relative border-t border-line bg-section text-on-section-variant">
   <div class="container-hi">
 
     <!-- 상단: 브랜드 + 고객센터 -->
@@ -560,8 +596,7 @@
       <div>
         <img src="/dev-hitop/images/brand/logo.png" alt="주식회사 하이탑" class="h-9 w-auto object-contain">
         <p class="mt-5 max-w-md text-sm leading-relaxed">
-          교량이음장치 · 논슬립 · 목재덱 전문 제조기업.<br>
-          직접 생산부터 사후관리까지 책임집니다.
+          교량이음장치 · 논슬립 · 목재덱 전문 제조기업.<br>직접 생산부터 사후관리까지 책임집니다.
         </p>
       </div>
       <div class="md:text-right">
@@ -597,7 +632,8 @@
         <ul class="space-y-2.5 text-sm">
           <li><a href="/dev-hitop/about/" class="transition-colors hover:text-primary">회사소개</a></li>
           <li><a href="/dev-hitop/delivery.html" class="transition-colors hover:text-primary">납품실적</a></li>
-          <li><a href="/dev-hitop/about/#location" class="transition-colors hover:text-primary">문의하기</a></li>
+          <li><a href="/dev-hitop/support/notice/" class="transition-colors hover:text-primary">공지사항</a></li>
+          <li><a href="/dev-hitop/support/inquiry/" class="transition-colors hover:text-primary">문의하기</a></li>
         </ul>
       </div>
     </div>

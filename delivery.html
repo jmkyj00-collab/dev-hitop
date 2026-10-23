@@ -11,7 +11,9 @@
 </head>
 <body class="bg-surface text-ink">
 
-  <header class="navbar" data-navbar>
+  
+
+<header class="navbar" data-navbar>
   <div class="container-hi flex h-full items-center justify-between">
 
     <!-- 로고 -->
@@ -19,10 +21,11 @@
       <img src="/dev-hitop/images/brand/logo.png" alt="주식회사 하이탑" class="navbar-logo-img">
     </a>
 
-    <!-- 데스크톱·태블릿 메뉴 -->
-    <nav class="hidden items-center gap-10 md:flex lg:gap-12" aria-label="주 메뉴">
+    <!-- 데스크톱 메뉴 (메뉴 5개 + 언어 전환이 들어가므로 lg 미만은 모바일 메뉴 사용) -->
+    <nav class="hidden items-center gap-7 lg:flex xl:gap-12" aria-label="주 메뉴">
       
         
+          
           <a href="/dev-hitop/" class="navbar-link ">홈</a>
         
       
@@ -65,15 +68,37 @@
         
       
         
+          
           <a href="/dev-hitop/delivery.html" class="navbar-link is-active">납품실적</a>
+        
+      
+        
+          
+          <div class="group relative">
+            <a href="/dev-hitop/support/notice/" class="navbar-link flex items-center gap-1">
+              고객지원
+              <span class="material-symbols-outlined text-base" aria-hidden="true">expand_more</span>
+            </a>
+            <div class="nav-dropdown">
+              
+                <a href="/dev-hitop/support/notice/">공지사항</a>
+              
+                <a href="/dev-hitop/support/inquiry/">온라인문의</a>
+              
+            </div>
+          </div>
         
       
     </nav>
 
     <!-- 우측 -->
     <div class="flex items-center gap-5">
-      <a href="/dev-hitop/about/#location" class="btn-accent hidden !px-5 !py-2.5 md:inline-flex">문의하기</a>
-      <button class="text-ink md:hidden" data-nav-toggle
+      <div class="lang-switch flex" aria-label="언어 선택">
+        <a href="/dev-hitop/delivery.html" lang="ko" hreflang="ko" aria-current="true" class="is-active">KOR</a>
+        <a href="/dev-hitop/en/delivery.html" lang="en" hreflang="en" >ENG</a>
+      </div>
+      <a href="/dev-hitop/support/inquiry/" class="btn-accent hidden !px-5 !py-2.5 lg:inline-flex">문의하기</a>
+      <button class="text-ink lg:hidden" data-nav-toggle
               aria-label="메뉴 열기" aria-controls="mobile-nav" aria-expanded="false">
         <span class="material-symbols-outlined" aria-hidden="true">menu</span>
       </button>
@@ -82,8 +107,8 @@
 </header>
 
 <!-- 모바일 메뉴 패널 -->
-<div id="mobile-nav" class="fixed inset-0 z-40 hidden bg-white pt-20 md:hidden" data-mobile-nav>
-  <nav class="flex h-full flex-col items-center justify-center gap-6 text-lg font-bold text-ink" aria-label="모바일 메뉴">
+<div id="mobile-nav" class="fixed inset-0 z-40 hidden overflow-y-auto bg-white pt-20 lg:hidden" data-mobile-nav>
+  <nav class="flex min-h-full flex-col items-center justify-center gap-6 py-10 text-lg font-bold text-ink" aria-label="모바일 메뉴">
     
       
         <a href="/dev-hitop/" class="transition-colors hover:text-accent">홈</a>
@@ -115,7 +140,16 @@
         <a href="/dev-hitop/delivery.html" class="transition-colors hover:text-accent">납품실적</a>
       
     
-    <a href="/dev-hitop/about/#location" class="btn-accent mt-2">문의하기</a>
+      
+        <span class="font-display text-xs font-bold uppercase tracking-[0.25em] text-secondary/70">고객지원</span>
+        
+          <a href="/dev-hitop/support/notice/" class="transition-colors hover:text-accent">공지사항</a>
+        
+          <a href="/dev-hitop/support/inquiry/" class="transition-colors hover:text-accent">온라인문의</a>
+        
+      
+    
+    <a href="/dev-hitop/support/inquiry/" class="btn-accent mt-2">문의하기</a>
   </nav>
 </div>
 
@@ -151,8 +185,7 @@
         <h2 class="mt-4 text-3xl font-extrabold leading-snug text-ink sm:text-4xl">현장과 규격으로 확인하는 납품 이력</h2>
       </div>
       <p class="border-t border-ink/15 pt-5 leading-relaxed text-secondary lg:col-span-5">
-        홈페이지에 공개된 대표 실적을 기준으로 발주기관과 현장명, 적용 모델을 정리했습니다.
-        아래 목록에서 기관·현장·제품 규격을 직접 검색할 수 있습니다.
+        홈페이지에 공개된 대표 실적을 기준으로 발주기관과 현장명, 적용 모델을 정리했습니다. 아래 목록에서 기관·현장·제품 규격을 직접 검색할 수 있습니다.
       </p>
     </div>
 
@@ -175,9 +208,9 @@
 
 <!-- ══ 납품현장 목록 ══ -->
 <section class="section container-hi" data-delivery-index>
-  <div class="grid gap-10 lg:grid-cols-12 lg:gap-14">
-    <div class="lg:col-span-4">
-      <div class="lg:sticky lg:top-28">
+  <div class="grid gap-10 xl:grid-cols-12 xl:gap-14">
+    <div class="xl:col-span-4">
+      <div class="xl:sticky xl:top-28">
         <span class="eyebrow-line">Project Index</span>
         <h2 class="mt-3 text-3xl font-extrabold text-ink">대표 납품현장</h2>
         <p class="mt-4 max-w-sm text-sm leading-relaxed text-secondary">
@@ -207,8 +240,8 @@
       </div>
     </div>
 
-    <div class="lg:col-span-8" data-delivery-list>
-      <div class="hidden grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] gap-5 border-b border-ink/25 pb-3 font-display text-[0.62rem] font-bold uppercase tracking-[0.18em] text-secondary/70 md:grid">
+    <div class="xl:col-span-8" data-delivery-list>
+      <div class="delivery-cols hidden gap-5 border-b border-ink/25 pb-3 font-display text-[0.62rem] font-bold uppercase tracking-[0.18em] text-secondary/70 lg:grid">
         <span>No.</span>
         <span>Client</span>
         <span>Project</span>
@@ -216,252 +249,306 @@
       </div>
 
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-80"
                  data-search="경기도 건설본부 이포대교 등 8개소 보수공사 NFJ-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">01</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">이포대교 등 8개소 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-80</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 건설본부 동막교 등 3개소 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">02</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">동막교 등 3개소 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 건설본부 난실교 등 2개소 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">03</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">난실교 등 2개소 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 건설본부 묘봉교 등 4개소 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">04</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">묘봉교 등 4개소 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 건설본부 발안1교 등 3개소 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">05</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">발안1교 등 3개소 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 건설본부 쌍지교 등 4개소 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">06</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">쌍지교 등 4개소 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 건설본부 남산교 등 6개소 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">07</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">남산교 등 6개소 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NMC-50"
                  data-search="경기도 건설본부 안성,평택 도로구조물 공사 NMC-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">08</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">안성,평택 도로구조물 공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NMC-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-30"
                  data-search="경기도 도시관리사업소 미주1교 보수보강 공사 NFJ-30">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">09</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 도시관리사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 도시관리사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">미주1교 보수보강 공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-30</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-30"
                  data-search="경기도 도시관리사업소 미주2교 보수보강 공사 NFJ-30">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">10</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 도시관리사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 도시관리사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">미주2교 보수보강 공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-30</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-100"
                  data-search="경기도 도시관리사업소 영진교 보수보강 공사 NFJ-100">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">11</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 도시관리사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 도시관리사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">영진교 보수보강 공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-100</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 산업지원본부 안산스마트허브 교량 정비공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">12</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 산업지원본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 산업지원본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">안산스마트허브 교량 정비공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 산업지원본부 시흥5교 신축이음 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">13</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 산업지원본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 산업지원본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">시흥5교 신축이음 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="경기도 산업지원본부 안산스마트허브 교량 및 보도육교 정비공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">14</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경기도 산업지원본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경기도 산업지원본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">안산스마트허브 교량 및 보도육교 정비공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="SFJ-250"
                  data-search="경상남도 도로관리사업소 농소교 신축이음 긴급교체공사 SFJ-250">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">15</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경상남도 도로관리사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경상남도 도로관리사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">농소교 신축이음 긴급교체공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">SFJ-250</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="SFJ-200"
                  data-search="경상북도 남부건설사업소 국도67호선 왜관과선교 보수공사 SFJ-200">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">16</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경상북도 남부건설사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경상북도 남부건설사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도67호선 왜관과선교 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">SFJ-200</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NMC-80"
                  data-search="경상북도 북부건설사업소 국도31호선 월전교 보수공사 NMC-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">17</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">경상북도 북부건설사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">경상북도 북부건설사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도31호선 월전교 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NMC-80</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="SFJ-300 SFJ-320"
                  data-search="광주광역시 종합건설본부 어등대교 등 2개소 신축이음 교체 공사 SFJ-300 SFJ-320">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">18</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">광주광역시 종합건설본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">광주광역시 종합건설본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">어등대교 등 2개소 신축이음 교체 공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">SFJ-300</span>
             
@@ -470,28 +557,34 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="SFJ-160"
                  data-search="대구광역시 도시관리본부 복현고가교 보수공사 SFJ-160">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">19</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">대구광역시 도시관리본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">대구광역시 도시관리본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">복현고가교 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">SFJ-160</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NMC-50 NFJ-80"
                  data-search="대구광역시 도시관리본부 팔달고가교 보수공사 NMC-50 NFJ-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">20</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">대구광역시 도시관리본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">대구광역시 도시관리본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">팔달고가교 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NMC-50</span>
             
@@ -500,42 +593,51 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NMC-60"
                  data-search="대구광역시 시설안전관리사업소 매천교 보수공사 NMC-60">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">21</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">대구광역시 시설안전관리사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">대구광역시 시설안전관리사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">매천교 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NMC-60</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="대구지방교정청 경북북부제1교도소 광덕교 보수,보강공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">22</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">대구지방교정청 경북북부제1교도소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">대구지방교정청 경북북부제1교도소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">광덕교 보수,보강공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-120 SFJ-200"
                  data-search="대전광역시 건설관리본부 용반교 보수보강공사 NFJ-120 SFJ-200">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">23</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">대전광역시 건설관리본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">대전광역시 건설관리본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">용반교 보수보강공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-120</span>
             
@@ -544,28 +646,34 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="SFJ-250"
                  data-search="대전광역시 건설관리본부 계룡육교 관급자재 SFJ-250">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">24</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">대전광역시 건설관리본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">대전광역시 건설관리본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">계룡육교 관급자재</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">SFJ-250</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NMCL-20 NMC-30 NMC-50 NMC-80"
                  data-search="대전지방국토관리청 예산국토관리사무소 국도21호선 가향교 교면포장 등 보수공사 등 4건 NMCL-20 NMC-30 NMC-50 NMC-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">25</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">대전지방국토관리청 예산국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">대전지방국토관리청 예산국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도21호선 가향교 교면포장 등 보수공사 등 4건</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NMCL-20</span>
             
@@ -578,28 +686,34 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="부산지방국토관리청 김해국토관리사무소 국도5호선 창곡교 등 8개소 시설물 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">26</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">부산지방국토관리청 김해국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">부산지방국토관리청 김해국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도5호선 창곡교 등 8개소 시설물 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50 NFJ-80 NFJ-100 SFJ-240"
                  data-search="부산지방국토관리청 김해국토관리사무소 국도14호선 좌천교등 6개소 시설물보수공사 NFJ-50 NFJ-80 NFJ-100 SFJ-240">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">27</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">부산지방국토관리청 김해국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">부산지방국토관리청 김해국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도14호선 좌천교등 6개소 시설물보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
@@ -612,28 +726,34 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-80"
                  data-search="부산지방국토관리청 대구국토관리사무소 국도25호선 동산교 등 2개소 시설물 보수공사 NFJ-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">28</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">부산지방국토관리청 대구국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">부산지방국토관리청 대구국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도25호선 동산교 등 2개소 시설물 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-80</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50 NFJ-80 NFJ-100"
                  data-search="부산지방국토관리청 영주국토관리사무소 국도36호선창평교등3개소 시설물 보수공사 NFJ-50 NFJ-80 NFJ-100">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">29</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">부산지방국토관리청 영주국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">부산지방국토관리청 영주국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도36호선창평교등3개소 시설물 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
@@ -644,14 +764,17 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50 NFJ-80 NFJ-100"
                  data-search="부산지방국토관리청 영주국토관리사무소 영주·예천지역 도로시설물 정비공사 NFJ-50 NFJ-80 NFJ-100">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">30</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">부산지방국토관리청 영주국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">부산지방국토관리청 영주국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">영주·예천지역 도로시설물 정비공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
@@ -662,28 +785,34 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="부산지방국토관리청 진주국토관리사무소 국도3호선 반월교 등 시설물 보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">31</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">부산지방국토관리청 진주국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">부산지방국토관리청 진주국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도3호선 반월교 등 시설물 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-30 NFJ-100"
                  data-search="서울지방국토관리청 수원국토관리사무소 국도42호선 추계2교 등 신축이음 보수공사 NFJ-30 NFJ-100">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">32</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">서울지방국토관리청 수원국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">서울지방국토관리청 수원국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도42호선 추계2교 등 신축이음 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-30</span>
             
@@ -692,14 +821,17 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-100 SFJ-160"
                  data-search="서울지방국토관리청 수원국토관리사무소 국도45호선 요덕교 등 시설물 보수공사 NFJ-100 SFJ-160">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">33</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">서울지방국토관리청 수원국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">서울지방국토관리청 수원국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도45호선 요덕교 등 시설물 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-100</span>
             
@@ -708,14 +840,17 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50 NFJ-80 NFJ-100 NFJ-120 NFJ-160 SFJ-240"
                  data-search="서울지방국토관리청 의정부국토관리사무소 국도43호선 포천1교 등 시설물 보수공사 NFJ-50 NFJ-80 NFJ-100 NFJ-120 NFJ-160 SFJ-240">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">34</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">서울지방국토관리청 의정부국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">서울지방국토관리청 의정부국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도43호선 포천1교 등 시설물 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
@@ -732,28 +867,34 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="서울지방국토관리청 의정부국토관리사무소 국도3호선 자금IC R-F교 등 포장 및 시설물보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">35</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">서울지방국토관리청 의정부국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">서울지방국토관리청 의정부국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도3호선 자금IC R-F교 등 포장 및 시설물보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50 SFJ-120 SFJ-150 SFJ-250"
                  data-search="서울지방국토관리청 의정부국토관리사무소 국도37호선 성적교(상) 등 시설물 보수공사 NFJ-50 SFJ-120 SFJ-150 SFJ-250">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">36</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">서울지방국토관리청 의정부국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">서울지방국토관리청 의정부국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도37호선 성적교(상) 등 시설물 보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
@@ -766,84 +907,102 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-100"
                  data-search="세종특별자치시 도로관리사업소 명학교 신축이음 긴급보수 NFJ-100">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">37</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">세종특별자치시 도로관리사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">세종특별자치시 도로관리사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">명학교 신축이음 긴급보수</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-100</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NMC-80"
                  data-search="세종특별자치시 도로관리사업소 유천과선교 보수보강공사 NMC-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">38</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">세종특별자치시 도로관리사업소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">세종특별자치시 도로관리사업소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">유천과선교 보수보강공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NMC-80</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-80"
                  data-search="원주지방국토관리청 정선국토관리사무소 국도31호선 영월 산솔 녹전 상동아교차로 개선공사 NFJ-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">39</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">원주지방국토관리청 정선국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">원주지방국토관리청 정선국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도31호선 영월 산솔 녹전 상동아교차로 개선공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-80</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="원주지방국토관리청 홍천국토관리사무소 국도44호선 신곡교(상) 등 5개소 교량보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">40</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">원주지방국토관리청 홍천국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">원주지방국토관리청 홍천국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도44호선 신곡교(상) 등 5개소 교량보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-50"
                  data-search="원주지방국토관리청 홍천국토관리사무소 국도5호선 춘성교 교량보수공사 NFJ-50">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">41</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">원주지방국토관리청 홍천국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">원주지방국토관리청 홍천국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도5호선 춘성교 교량보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-50</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-80 NFJ-120"
                  data-search="원주지방국토관리청 홍천국토관리사무소 국도42호선 보통교 등 3개소 교량보수공사 NFJ-80 NFJ-120">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">42</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">원주지방국토관리청 홍천국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">원주지방국토관리청 홍천국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도42호선 보통교 등 3개소 교량보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-80</span>
             
@@ -852,42 +1011,51 @@
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="NFJ-80"
                  data-search="원주지방국토관리청 홍천국토관리사무소 국도42호선 복술2교(상) 등 9개 교량보수공사 NFJ-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">43</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">원주지방국토관리청 홍천국토관리사무소</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">원주지방국토관리청 홍천국토관리사무소</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">국도42호선 복술2교(상) 등 9개 교량보수공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">NFJ-80</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="SFJ-100"
                  data-search="한국도로공사 전북본부 교량 신축이음장치 공사 SFJ-100">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">44</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">한국도로공사 전북본부</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">한국도로공사 전북본부</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">교량 신축이음장치 공사</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">SFJ-100</span>
             
           </div>
         </article>
       
-        <article class="group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 md:grid-cols-[3.5rem_minmax(0,0.9fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-5"
+        
+        
+        <article class="delivery-cols group grid gap-3 border-b border-line py-6 transition-colors duration-300 hover:border-ink/30 lg:items-center lg:gap-5"
                  data-delivery-row
                  data-models="Rail Joint-80"
                  data-search="한국도로공사 중부도로개량사업단 중부선 지급자재 Rail Joint-80">
           <span class="font-display text-xs font-bold tracking-[0.16em] text-ink/25 transition-colors group-hover:text-accent">45</span>
-          <p class="text-sm font-bold leading-relaxed text-ink">한국도로공사 중부도로개량사업단</p>
+          
+          <p class="text-sm font-bold leading-relaxed text-ink lg:whitespace-nowrap">한국도로공사 중부도로개량사업단</p>
           <h3 class="text-[0.95rem] font-semibold leading-relaxed text-ink/85">중부선 지급자재</h3>
-          <div class="flex flex-wrap gap-1.5 md:max-w-[180px] md:justify-end">
+          <div class="flex flex-wrap gap-1.5 lg:justify-end">
             
               <span class="delivery-model">Rail Joint-80</span>
             
@@ -922,7 +1090,7 @@
       </div>
       <div class="flex flex-wrap items-center gap-4">
         <a href="tel:042-825-2009" class="font-display text-2xl font-extrabold text-white transition-opacity hover:opacity-80">042-825-2009</a>
-        <a href="/dev-hitop/about/#location" class="btn-light">문의하기</a>
+        <a href="/dev-hitop/support/inquiry/" class="btn-light">문의하기</a>
         
           <a href="/dev-hitop/products-bridge.html" class="btn-outline-white">제품 상세보기</a>
         
@@ -934,7 +1102,8 @@
 
   </main>
 
-  <footer class="relative border-t border-line bg-section text-on-section-variant">
+  
+<footer class="relative border-t border-line bg-section text-on-section-variant">
   <div class="container-hi">
 
     <!-- 상단: 브랜드 + 고객센터 -->
@@ -942,8 +1111,7 @@
       <div>
         <img src="/dev-hitop/images/brand/logo.png" alt="주식회사 하이탑" class="h-9 w-auto object-contain">
         <p class="mt-5 max-w-md text-sm leading-relaxed">
-          교량이음장치 · 논슬립 · 목재덱 전문 제조기업.<br>
-          직접 생산부터 사후관리까지 책임집니다.
+          교량이음장치 · 논슬립 · 목재덱 전문 제조기업.<br>직접 생산부터 사후관리까지 책임집니다.
         </p>
       </div>
       <div class="md:text-right">
@@ -979,7 +1147,8 @@
         <ul class="space-y-2.5 text-sm">
           <li><a href="/dev-hitop/about/" class="transition-colors hover:text-primary">회사소개</a></li>
           <li><a href="/dev-hitop/delivery.html" class="transition-colors hover:text-primary">납품실적</a></li>
-          <li><a href="/dev-hitop/about/#location" class="transition-colors hover:text-primary">문의하기</a></li>
+          <li><a href="/dev-hitop/support/notice/" class="transition-colors hover:text-primary">공지사항</a></li>
+          <li><a href="/dev-hitop/support/inquiry/" class="transition-colors hover:text-primary">문의하기</a></li>
         </ul>
       </div>
     </div>

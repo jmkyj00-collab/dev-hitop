@@ -366,3 +366,54 @@ if (counters.length) {
   );
   io.observe(counters[0]);
 }
+
+// 6) 온라인문의 — 정적 사이트라 서버 전송 대신 메일 앱(mailto)으로 작성 내용을 넘긴다
+const inquiryForm = document.querySelector('[data-inquiry-form]');
+if (inquiryForm) {
+  const errorEl = inquiryForm.querySelector('[data-inquiry-error]');
+  const resultEl = inquiryForm.querySelector('[data-inquiry-result]');
+  const textEl = inquiryForm.querySelector('[data-inquiry-text]');
+  const copyBtn = inquiryForm.querySelector('[data-inquiry-copy]');
+
+  inquiryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!inquiryForm.checkValidity()) {
+      inquiryForm.classList.add('is-invalid');
+      if (errorEl) errorEl.classList.remove('hidden');
+      const firstInvalid = inquiryForm.querySelector(':invalid');
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
+    inquiryForm.classList.remove('is-invalid');
+    if (errorEl) errorEl.classList.add('hidden');
+
+    // data-label이 붙은 항목을 "라벨: 값" 줄로 정리 (라벨은 페이지 언어 그대로)
+    const lines = Array.from(inquiryForm.querySelectorAll('[data-label]'))
+      .filter((field) => field.name !== 'subject' && field.value.trim())
+      .map((field) => field.name === 'message'
+        ? '\n' + field.dataset.label + ':\n' + field.value.trim()
+        : field.dataset.label + ': ' + field.value.trim());
+    const subject = (inquiryForm.dataset.subjectPrefix || '') + ' ' + inquiryForm.elements.subject.value.trim();
+    const body = lines.join('\n');
+
+    if (textEl) textEl.value = subject + '\n\n' + body;
+    if (resultEl) resultEl.classList.remove('hidden');
+    window.location.href = 'mailto:' + inquiryForm.dataset.mailTo
+      + '?subject=' + encodeURIComponent(subject.trim())
+      + '&body=' + encodeURIComponent(body);
+  });
+
+  if (copyBtn && textEl) {
+    const original = copyBtn.textContent;
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(textEl.value);
+      } catch (err) {
+        textEl.select();
+        document.execCommand('copy');
+      }
+      copyBtn.textContent = copyBtn.dataset.copiedLabel || original;
+      setTimeout(() => { copyBtn.textContent = original; }, 2000);
+    });
+  }
+}

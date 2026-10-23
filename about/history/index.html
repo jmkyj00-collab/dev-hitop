@@ -11,7 +11,9 @@
 </head>
 <body class="bg-surface text-ink">
 
-  <header class="navbar" data-navbar>
+  
+
+<header class="navbar" data-navbar>
   <div class="container-hi flex h-full items-center justify-between">
 
     <!-- 로고 -->
@@ -19,10 +21,11 @@
       <img src="/dev-hitop/images/brand/logo.png" alt="주식회사 하이탑" class="navbar-logo-img">
     </a>
 
-    <!-- 데스크톱·태블릿 메뉴 -->
-    <nav class="hidden items-center gap-10 md:flex lg:gap-12" aria-label="주 메뉴">
+    <!-- 데스크톱 메뉴 (메뉴 5개 + 언어 전환이 들어가므로 lg 미만은 모바일 메뉴 사용) -->
+    <nav class="hidden items-center gap-7 lg:flex xl:gap-12" aria-label="주 메뉴">
       
         
+          
           <a href="/dev-hitop/" class="navbar-link ">홈</a>
         
       
@@ -65,15 +68,37 @@
         
       
         
+          
           <a href="/dev-hitop/delivery.html" class="navbar-link ">납품실적</a>
+        
+      
+        
+          
+          <div class="group relative">
+            <a href="/dev-hitop/support/notice/" class="navbar-link flex items-center gap-1">
+              고객지원
+              <span class="material-symbols-outlined text-base" aria-hidden="true">expand_more</span>
+            </a>
+            <div class="nav-dropdown">
+              
+                <a href="/dev-hitop/support/notice/">공지사항</a>
+              
+                <a href="/dev-hitop/support/inquiry/">온라인문의</a>
+              
+            </div>
+          </div>
         
       
     </nav>
 
     <!-- 우측 -->
     <div class="flex items-center gap-5">
-      <a href="/dev-hitop/about/#location" class="btn-accent hidden !px-5 !py-2.5 md:inline-flex">문의하기</a>
-      <button class="text-ink md:hidden" data-nav-toggle
+      <div class="lang-switch flex" aria-label="언어 선택">
+        <a href="/dev-hitop/about/history/" lang="ko" hreflang="ko" aria-current="true" class="is-active">KOR</a>
+        <a href="/dev-hitop/en/about/history/" lang="en" hreflang="en" >ENG</a>
+      </div>
+      <a href="/dev-hitop/support/inquiry/" class="btn-accent hidden !px-5 !py-2.5 lg:inline-flex">문의하기</a>
+      <button class="text-ink lg:hidden" data-nav-toggle
               aria-label="메뉴 열기" aria-controls="mobile-nav" aria-expanded="false">
         <span class="material-symbols-outlined" aria-hidden="true">menu</span>
       </button>
@@ -82,8 +107,8 @@
 </header>
 
 <!-- 모바일 메뉴 패널 -->
-<div id="mobile-nav" class="fixed inset-0 z-40 hidden bg-white pt-20 md:hidden" data-mobile-nav>
-  <nav class="flex h-full flex-col items-center justify-center gap-6 text-lg font-bold text-ink" aria-label="모바일 메뉴">
+<div id="mobile-nav" class="fixed inset-0 z-40 hidden overflow-y-auto bg-white pt-20 lg:hidden" data-mobile-nav>
+  <nav class="flex min-h-full flex-col items-center justify-center gap-6 py-10 text-lg font-bold text-ink" aria-label="모바일 메뉴">
     
       
         <a href="/dev-hitop/" class="transition-colors hover:text-accent">홈</a>
@@ -115,7 +140,16 @@
         <a href="/dev-hitop/delivery.html" class="transition-colors hover:text-accent">납품실적</a>
       
     
-    <a href="/dev-hitop/about/#location" class="btn-accent mt-2">문의하기</a>
+      
+        <span class="font-display text-xs font-bold uppercase tracking-[0.25em] text-secondary/70">고객지원</span>
+        
+          <a href="/dev-hitop/support/notice/" class="transition-colors hover:text-accent">공지사항</a>
+        
+          <a href="/dev-hitop/support/inquiry/" class="transition-colors hover:text-accent">온라인문의</a>
+        
+      
+    
+    <a href="/dev-hitop/support/inquiry/" class="btn-accent mt-2">문의하기</a>
   </nav>
 </div>
 
@@ -308,7 +342,7 @@
       </div>
       <div class="flex flex-wrap items-center gap-4">
         <a href="tel:042-825-2009" class="font-display text-2xl font-extrabold text-white transition-opacity hover:opacity-80">042-825-2009</a>
-        <a href="/dev-hitop/about/#location" class="btn-light">문의하기</a>
+        <a href="/dev-hitop/support/inquiry/" class="btn-light">문의하기</a>
         
           <a href="/dev-hitop/about/certifications/" class="btn-outline-white">산업재산권 및 인증 보기</a>
         
@@ -320,7 +354,8 @@
 
   </main>
 
-  <footer class="relative border-t border-line bg-section text-on-section-variant">
+  
+<footer class="relative border-t border-line bg-section text-on-section-variant">
   <div class="container-hi">
 
     <!-- 상단: 브랜드 + 고객센터 -->
@@ -328,8 +363,7 @@
       <div>
         <img src="/dev-hitop/images/brand/logo.png" alt="주식회사 하이탑" class="h-9 w-auto object-contain">
         <p class="mt-5 max-w-md text-sm leading-relaxed">
-          교량이음장치 · 논슬립 · 목재덱 전문 제조기업.<br>
-          직접 생산부터 사후관리까지 책임집니다.
+          교량이음장치 · 논슬립 · 목재덱 전문 제조기업.<br>직접 생산부터 사후관리까지 책임집니다.
         </p>
       </div>
       <div class="md:text-right">
@@ -365,7 +399,8 @@
         <ul class="space-y-2.5 text-sm">
           <li><a href="/dev-hitop/about/" class="transition-colors hover:text-primary">회사소개</a></li>
           <li><a href="/dev-hitop/delivery.html" class="transition-colors hover:text-primary">납품실적</a></li>
-          <li><a href="/dev-hitop/about/#location" class="transition-colors hover:text-primary">문의하기</a></li>
+          <li><a href="/dev-hitop/support/notice/" class="transition-colors hover:text-primary">공지사항</a></li>
+          <li><a href="/dev-hitop/support/inquiry/" class="transition-colors hover:text-primary">문의하기</a></li>
         </ul>
       </div>
     </div>
