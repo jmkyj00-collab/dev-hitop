@@ -667,9 +667,10 @@
       </div>
     </div>
 
-    <!-- 중단: 링크 -->
-    <div class="grid grid-cols-2 gap-10 py-12 md:grid-cols-4">
-      <div class="col-span-2 md:col-span-2">
+    <!-- 중단: 회사·공장 정보 + 링크
+         모바일: 회사 / 공장 / (제품 | 바로가기)  ·  sm~lg: (회사 | 공장) / (제품 | 바로가기)  ·  lg 이상: 한 줄 4칸 -->
+    <div class="grid grid-cols-2 gap-10 py-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)_auto_auto] lg:gap-x-12">
+      <div class="col-span-2 sm:col-span-1">
         <h5 class="mb-4 font-display text-[0.7rem] font-bold uppercase tracking-[0.25em] text-secondary/80">Company</h5>
         <p class="text-sm leading-relaxed">
           대전광역시 유성구 계룡로105번길 15 한진오피스텔 11층 1110호<br>
@@ -677,6 +678,14 @@
           Tel: 042-825-2009 · Fax: 041-584-2011
         </p>
         <p class="mt-4 font-display text-xs uppercase tracking-wider text-secondary/70">조달청 등록 · 벤처기업 · G-PASS 인증</p>
+      </div>
+
+      <div class="col-span-2 sm:col-span-1">
+        <h5 class="mb-4 font-display text-[0.7rem] font-bold uppercase tracking-[0.25em] text-secondary/80">Factory</h5>
+        <p class="text-sm leading-relaxed">
+          충청남도 아산시 음봉면 신의길208번길 17-49<br>
+          Tel: 041-584-2007
+        </p>
       </div>
 
       <div>
