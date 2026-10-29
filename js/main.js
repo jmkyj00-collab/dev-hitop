@@ -366,3 +366,21 @@ if (counters.length) {
   );
   io.observe(counters[0]);
 }
+
+// 6) 연도 기반 수치 — HTML에는 빌드 시점 값이 들어 있고, 방문 시점의 올해로 다시 계산 (해가 바뀌어도 재배포 불필요)
+//    업력 = 올해 − 창업 연도(<html data-founded-year>, site.json foundedYear)
+const foundedYear = +document.documentElement.dataset.foundedYear;
+if (foundedYear) {
+  const thisYear = new Date().getFullYear();
+  const inBusiness = String(thisYear - foundedYear);
+  document.querySelectorAll('[data-current-year]').forEach((el) => { el.textContent = thisYear; });
+  document.querySelectorAll('[data-years-in-business]').forEach((el) => {
+    if (el.dataset.target) {
+      // 카운터: 목표값과 애니메이션 전 표시값(첫 텍스트 노드)을 함께 갱신
+      el.dataset.target = inBusiness;
+      el.firstChild.nodeValue = inBusiness;
+    } else {
+      el.textContent = inBusiness;
+    }
+  });
+}
