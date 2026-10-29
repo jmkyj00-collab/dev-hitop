@@ -136,23 +136,35 @@
     <img src="/images/hero/hero-main.png" alt="교량 전경 — 하이탑 교량이음장치 적용 분야"
          class="kenburns h-full w-full object-cover" onerror="this.style.display='none'">
   </div>
-  <!-- 시네마틱 그라데이션: 텍스트가 앉는 좌측·하단만 어둡게, 우측은 밝은 사진 그대로 -->
-  <div class="absolute inset-0 z-10 bg-gradient-to-r from-night/75 via-night/35 to-night/5"></div>
-  <div class="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-night/70 to-transparent"></div>
-  <!-- 제품 콘텐츠 전환 시 배경 딤 (JS가 스크롤 진행도로 opacity 제어) -->
-  <div class="absolute inset-0 z-10 bg-night opacity-0" data-hero-dim></div>
+  <!-- 시네마틱 그라데이션: 텍스트가 앉는 좌측만 어둡게(흰 글씨 대비 약 3:1 유지), 80% 지점부터 사진 그대로.
+       하단은 작은 인증 문구 대비에 여유가 있어 옅게 -->
+  <div class="absolute inset-0 z-10 bg-gradient-to-r from-night/45 via-night/20 via-45% to-transparent to-80%"></div>
+  <div class="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-night/50 to-transparent"></div>
+  <!-- 제품 섹션도 같은 배경을 그대로 쓴다 (전환 시 추가 딤 없음) -->
 
-  <div class="container-hi relative z-20 w-full text-white" data-hero-content>
-    <div class="max-w-3xl">
-      <p class="mask-line">
-        <span class="eyebrow-line !text-white/60">Bridge Joint · Non-Slip · Wood Deck</span>
+  <!-- 홈페이지 주소 표기: 헤더 아래. 기본은 본문(BRIDGE) 줄에 맞추고, 넓은 화면(1440px+)에서는
+       본문 줄보다 68px 왼쪽에 고정. 크기는 아래 영문 문구와 동일.
+       (hitop.kr은 아직 구 홈페이지로 연결되므로 링크 없이 텍스트만 / data-hero-content로 본문과 함께 스크롤 시 사라짐) -->
+  <div class="absolute inset-x-0 top-[6.8rem] z-20 text-white" data-hero-content>
+    <div class="container-hi">
+      <p class="mask-line min-[1440px]:-ml-[4.25rem]">
+        <span class="font-display text-[1.05rem] font-semibold tracking-[0.12em] lift-shadow-sm sm:text-[1.235rem]">hitop.kr</span>
       </p>
-      <h1 class="mt-6 text-[2.6rem] font-extrabold leading-[1.18] tracking-tight [text-shadow:0_2px_24px_rgba(11,14,19,0.4)] sm:text-6xl lg:text-[4.2rem]">
+    </div>
+  </div>
+
+  <!-- 본문 묶음은 화면 중앙. 위아래 여백(주소 줄 높이 + 간격)으로 낮은 화면에서도 주소와 겹치지 않게 -->
+  <div class="container-hi relative z-20 flex w-full flex-col self-stretch py-[10.65rem] text-white" data-hero-content>
+    <div class="my-auto max-w-3xl">
+      <p class="mask-line">
+        <span class="eyebrow-line !text-[0.75rem] !tracking-[0.14em] !text-white/95 lift-shadow-sm sm:!text-[1.235rem] sm:!tracking-[0.24em]">Bridge Joint · Non-Slip · Wood Deck</span>
+      </p>
+      <h1 class="mt-6 text-[2.6rem] font-extrabold leading-[1.18] tracking-tight lift-shadow sm:text-6xl lg:text-[4.2rem]">
         <span class="mask-line"><span>구조물의 안전을 잇는</span></span>
         <span class="mask-line"><span>정밀 기술</span></span>
       </h1>
       <p class="mask-line mask-delay-1 mt-7 max-w-xl">
-        <span class="text-base leading-relaxed text-white/80 [text-shadow:0_1px_12px_rgba(11,14,19,0.45)] sm:text-lg">
+        <span class="text-base font-medium leading-relaxed text-white/95 lift-shadow-sm sm:text-lg">
           교량이음장치부터 논슬립, 목재덱까지 직접 생산한 제품을 사후관리까지 하이탑이 책임집니다.
         </span>
       </p>
@@ -163,7 +175,7 @@
         </span>
       </div>
       <p class="mask-line mask-delay-2 mt-12">
-        <span class="font-display text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-white/60 [text-shadow:0_1px_10px_rgba(11,14,19,0.45)]">
+        <span class="font-display text-[0.8rem] font-semibold uppercase tracking-[0.16em] text-white/90 lift-shadow-sm">
           나라장터 등록 제품 74개 &nbsp;·&nbsp; 벤처기업 &nbsp;·&nbsp; G-PASS &nbsp;·&nbsp; 등록 특허 5건
         </span>
       </p>
@@ -172,7 +184,7 @@
 
   <!-- 스크롤 큐 -->
   <div class="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex" data-hero-cue>
-    <span class="font-display text-[0.6rem] font-bold uppercase tracking-[0.3em] text-white/45">Scroll</span>
+    <span class="font-display text-[0.65rem] font-bold uppercase tracking-[0.3em] text-white/75 lift-shadow-sm">Scroll</span>
     <span class="scroll-cue-line"></span>
   </div>
 </section>
@@ -184,10 +196,10 @@
     <div class="container-hi w-full">
       <div class="mb-9 flex flex-wrap items-end justify-between gap-5" data-reveal="top">
         <div>
-          <span class="eyebrow-line !text-white/75 [text-shadow:0_1px_10px_rgba(11,14,19,0.5)]">Product Lineup</span>
-          <h2 class="mt-3 text-3xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(11,14,19,0.5)] sm:text-4xl">핵심 제품군</h2>
+          <span class="eyebrow-line !text-[0.8rem] !text-white/95 lift-shadow-sm">Product Lineup</span>
+          <h2 class="mt-3 text-3xl font-extrabold text-white lift-shadow sm:text-4xl">핵심 제품군</h2>
         </div>
-        <a href="/delivery.html" class="group inline-flex items-center gap-2 pb-1 font-display text-[0.78rem] font-bold uppercase tracking-[0.18em] text-white/70 [text-shadow:0_1px_10px_rgba(11,14,19,0.5)] transition-colors hover:text-white">
+        <a href="/delivery.html" class="group inline-flex items-center gap-2 pb-1 font-display text-[0.78rem] font-bold uppercase tracking-[0.18em] text-white/95 lift-shadow-sm transition-colors hover:text-white">
           나라장터 등록제품
           <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">arrow_forward</span>
         </a>
@@ -200,9 +212,9 @@
                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                onerror="this.style.opacity=0">
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-night/95 via-night/30 to-transparent p-7">
-            <span class="absolute left-7 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">01</span>
+            <span class="absolute left-7 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/90 lift-shadow-sm">01</span>
             <h3 class="mb-2 text-2xl font-extrabold text-white">교량이음장치</h3>
-            <p class="mb-5 max-w-md text-sm leading-relaxed text-white/65">Monocell · Finger · Rail Seal 등 6종의 고성능 조인트로 구조물의 신축과 안전성을 확보합니다.</p>
+            <p class="mb-5 max-w-md text-sm leading-relaxed text-white/85">Monocell · Finger · Rail Seal 등 6종의 고성능 조인트로 구조물의 신축과 안전성을 확보합니다.</p>
             <span class="product-lineup-cta">
               View More <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
             </span>
@@ -215,9 +227,9 @@
                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                onerror="this.style.opacity=0">
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-night/95 via-night/35 to-transparent p-6">
-            <span class="absolute left-6 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">02</span>
+            <span class="absolute left-6 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/90 lift-shadow-sm">02</span>
             <h3 class="mb-2 text-2xl font-extrabold text-white">논슬립</h3>
-            <p class="mb-4 text-sm leading-relaxed text-white/65">스테인리스 · 세라믹 · 알루미늄 등 보행 안전을 위한 프리미엄 논슬립 솔루션.</p>
+            <p class="mb-4 text-sm leading-relaxed text-white/85">스테인리스 · 세라믹 · 알루미늄 등 보행 안전을 위한 프리미엄 논슬립 솔루션.</p>
             <span class="product-lineup-cta">
               View More <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
             </span>
@@ -230,10 +242,10 @@
                class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                onerror="this.style.opacity=0">
           <div class="absolute inset-0 flex items-end bg-gradient-to-r from-night/90 via-night/45 to-transparent p-7">
-            <span class="absolute left-7 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/70 [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">03</span>
+            <span class="absolute left-7 top-6 font-display text-sm font-bold tracking-[0.2em] text-white/90 lift-shadow-sm">03</span>
             <div class="max-w-2xl">
               <h3 class="mb-2 text-2xl font-extrabold text-white">천연 목재덱</h3>
-              <p class="mb-4 text-sm leading-relaxed text-white/65">낙엽송 · 마사란두바 · 멀바우 · 카스 등 내구성이 검증된 천연 목재로 자연과 조화로운 공간을 제안합니다.</p>
+              <p class="mb-4 text-sm leading-relaxed text-white/85">낙엽송 · 마사란두바 · 멀바우 · 카스 등 내구성이 검증된 천연 목재로 자연과 조화로운 공간을 제안합니다.</p>
               <span class="product-lineup-cta">
                 View More <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
               </span>

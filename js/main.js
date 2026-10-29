@@ -97,27 +97,27 @@ if (toggleBtn && mobileNav) {
     return { t1, t3, t4, fits, coreFits };
   }
 
-  // 히어로 이탈 스크럽: 배경(교량 사진)은 고정된 채 콘텐츠만 위로 사라지고 배경이 살짝 딤
-  const heroContent = hero.querySelector('[data-hero-content]');
-  const heroCue     = hero.querySelector('[data-hero-cue]');
-  const heroDim     = hero.querySelector('[data-hero-dim]');
+  // 히어로 이탈 스크럽: 배경(교량 사진)은 고정된 채 콘텐츠만 위로 사라짐 (배경 밝기는 제품 섹션과 동일)
+  // 콘텐츠는 본문 묶음 + 좌상단 주소 표기 등 여러 덩어리일 수 있다
+  const heroContents = Array.from(hero.querySelectorAll('[data-hero-content]'));
+  const heroCue      = hero.querySelector('[data-hero-cue]');
 
   function updateHeroExit(sy) {
-    if (!heroContent) return;
+    if (!heroContents.length) return;
     const { t1 } = pts();
     if (t1 <= 0) return;
     const p = Math.min(Math.max(sy / t1, 0), 1);
     if (reduceMotion) {
       const gone = p > 0.5;
-      heroContent.style.opacity = gone ? '0' : '';
+      heroContents.forEach((el) => { el.style.opacity = gone ? '0' : ''; });
       if (heroCue) heroCue.style.opacity = gone ? '0' : '';
-      if (heroDim) heroDim.style.opacity = gone ? '0.38' : '';
       return;
     }
-    heroContent.style.opacity = 1 - p;
-    heroContent.style.transform = 'translateY(' + (-p * 70) + 'px)';
+    heroContents.forEach((el) => {
+      el.style.opacity = 1 - p;
+      el.style.transform = 'translateY(' + (-p * 70) + 'px)';
+    });
     if (heroCue) heroCue.style.opacity = Math.max(1 - p * 2, 0); // 큐는 먼저 사라짐
-    if (heroDim) heroDim.style.opacity = p * 0.38;               // 제품 콘텐츠 가독성용 딤 (밝은 무드 유지)
   }
 
   // 섹션 리빌: 일반 요소는 같은 순간 들어온 순서대로 스태거 적용
